@@ -7,32 +7,35 @@
  *
  * Nota: Para que el interceptor actúe debe registrarse en el proveedor de interceptors del módulo principal:
  * providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
- *
- * Si prefieres que sólo añada documentación sin implementación, dímelo y dejo el archivo con sólo comentarios.
  */
-import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { inject } from '@angular/core';
+import { HttpInterceptorFn, HttpRequest, HttpHandlerFn, HttpEvent, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { AuthService } from '../services/auth.service';
 
-@Injectable()
-export class AuthInterceptor implements HttpInterceptor {
-  constructor(private authService: AuthService) {}
+export const authInterceptor: HttpInterceptorFn = (req: HttpRequest<any>, next: HttpHandlerFn): Observable<HttpEvent<any>> => {
+  const authService = inject(AuthService);
+  const token = authService.getToken();
 
-  /**
-   * Intercepta peticiones HTTP y añade Authorization si hay token.
-   * @param req Petición HTTP original
-   * @param next HttpHandler que continúa la cadena de interceptores
-   * @returns Observable<HttpEvent<any>> Flujo de la petición HTTP
-   */
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = this.authService.getToken();
-    if (token) {
-      const cloned = req.clone({
-        setHeaders: { Authorization: `Bearer ${token}` },
-      });
-      return next.handle(cloned);
-    }
-    return next.handle(req);
+  let authReq = req;
+  if (token) {
+    authReq = req.clone({
+      setHeaders: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
-} 
+
+  return next(authReq).pipe(
+    catchError((err: HttpErrorResponse) => {
+      if (err.status === 401) {
+        // Logout automático en caso de token inválido/expirado
+        authService.logout();
+        // Redirigir al login
+        window.location.href = '/';
+      }
+      return throwError(() => err);
+    })
+  );
+}; 

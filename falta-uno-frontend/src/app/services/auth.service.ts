@@ -5,15 +5,65 @@
  * - Guardar token y usuario
  * - Recuperar token y usuario
  * - Verificar si hay sesión iniciada
- *
- * Nota: Este servicio NO realiza llamadas HTTP, sólo gestiona el estado local.
+ * - Hacer login con backend (loginGoogle)
  */
 import { Injectable } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AuthService {
+    constructor(private http: HttpClient) {}
+
+    /**
+     * Realiza login con token de Google en el backend y guarda la sesión localmente.
+     * @param token ID token de Google.
+     * @returns Observable con la respuesta del backend (accessToken, usuario).
+     */
+    /**
+     * Login usando token de Google (ya existente).
+     */
+    loginGoogle(token: string): Observable<any> {
+        // Usar la URL desde environment
+        const url = `${environment.apiUrl}/auth/loginGoogle`;
+        return this.http.post<any>(url, { token }).pipe(
+            tap((res) => {
+                if (res && res.accessToken && res.usuario) {
+                    this.saveSession(res.accessToken, res.usuario);
+                }
+            })
+        );
+    }
+
+    /**
+     * Login manual con correo y contraseña.
+     * @param correo correo del usuario
+     * @param password contraseña en texto plano (se enviará al backend)
+     */
+    loginManual(correo: string, password: string): Observable<any> {
+        const url = `${environment.apiUrl}/auth/login`;
+        return this.http.post<any>(url, { correo, password }).pipe(
+            tap((res) => {
+                if (res && res.accessToken && res.usuario) {
+                    this.saveSession(res.accessToken, res.usuario);
+                }
+            })
+        );
+    }
+
+    /**
+     * Registrar un usuario manualmente.
+     * @param dto Objeto con { correo, nombre, password }
+     */
+    registrarUsuario(dto: { correo: string; nombre: string; password?: string }): Observable<any> {
+        const url = `${environment.apiUrl}/usuario/agregarUsuario`;
+        return this.http.post<any>(url, dto);
+    }
+
     /**
      * Guarda la sesión en localStorage.
      * @param accessToken Token JWT de acceso. Tipo: string.
@@ -58,4 +108,4 @@ export class AuthService {
     isLoggedIn(): boolean {
         return !!this.getToken();
     }
-}
+} 

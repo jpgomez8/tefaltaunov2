@@ -1,0 +1,163 @@
+<main class="auth-shell">
+  <section class="story" aria-label="Bienvenido a Falta Uno">
+    <a class="brand" routerLink="/iniciar-sesion" aria-label="Falta Uno: iniciar sesión">
+      <img class="brand-logo" src="images/falta-uno-logo-azul.png" alt="Falta Uno. El deporte nos encuentra." width="405" height="180" />
+    </a>
+    <div class="story-copy">
+      <p class="eyebrow"><span></span> EL PRÓXIMO EQUIPO EMPIEZA CONTIGO</p>
+      <h1>Las mejores<br />historias empiezan<br /> con un <em>¿te sumas?</em></h1>
+      <p>
+        Un trote al atardecer. Un partido entre amigos.<br />Una nueva forma de moverte, en
+        compañía.
+      </p>
+    </div>
+    <div class="orbit" aria-hidden="true">
+      <div class="orbit-inner"></div>
+      <span class="sport s1"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 33h40M4 40c5-5 9 5 14 0s9 5 14 0 8 3 12 0M13 30a11 11 0 0 1 22 0M24 5v6M7 14l5 5M41 14l-5 5M3 25h6M39 25h6"/></svg><small>AIRE LIBRE</small><span class="sport-caption">Nuevos lugares,<br/>nuevas historias.</span></span
+      ><span class="sport s2"><svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="12" r="6"/><circle cx="9" cy="17" r="5"/><circle cx="39" cy="17" r="5"/><path d="M14 40v-9a10 10 0 0 1 20 0v9zM2 39v-9a7 7 0 0 1 11-6c-2 4-2 9-2 15zm35 0c0-6 0-11-2-15a7 7 0 0 1 11 6v9z"/></svg><small>EN EQUIPO</small><span class="sport-caption">Más deporte,<br/>nuevas amistades.</span></span
+      ><span class="sport s3"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 7 7 3 2 10 8 7 12 5 2 8H8L5 28l8-11zM20 20l-5 4m11 1-5 4m11 0-5 4M8 35h34M2 17h7M1 23h6"/></svg><small>A TU RITMO</small><span class="sport-caption">Tu deporte,<br/>tu momento.</span></span>
+      <div class="join-mark">+<small>FALTAS TÚ</small></div>
+    </div>
+    <footer><span>Hecho para movernos juntos.</span><span>CHILE ↗</span></footer>
+  </section>
+  <section class="form-side">
+    <nav>
+      <span>Una comunidad. Muchas maneras de moverte.</span
+      ><a routerLink="/estado">Estado del servicio ↗</a>
+    </nav>
+    <div class="form-wrap">
+      @if (loading()) {
+        <p role="status">Conectando con Falta Uno…</p>
+      } @else if (usuario(); as user) {
+        <div class="mini-label">YA ERES PARTE</div>
+        <h2>¡Qué bueno verte,<br />{{ user.nombre_publico }}!</h2>
+        <p class="intro">Tu sesión está iniciada en Falta Uno.</p>
+        <div class="welcome">
+          <img class="account-logo" src="images/falta-uno-logo-azul.png" width="260" height="116" alt="Falta Uno. El deporte nos encuentra." /><strong>{{
+            user.nombre_publico
+          }}</strong
+          ><span>{{ user.correo }}</span>
+        </div>
+        @if (user.estado === 'pendiente_verificacion') {
+          <p class="info">
+            Tu correo aún está pendiente de verificación. El envío de correos estará disponible más
+            adelante.
+          </p>
+        }
+        <p class="intro">
+          Estamos preparando los encuentros deportivos. Por ahora, ya tienes tu cuenta y tu acceso.
+        </p>
+        @if (error()) {
+          <p class="alert" role="alert">{{ error() }}</p>
+        }
+        <button class="primary" type="button" (click)="logout()" [disabled]="busy()">
+          {{ busy() ? 'Cerrando sesión…' : 'Cerrar sesión' }} <span>↗</span>
+        </button>
+      } @else {
+        <div class="mini-label">
+          {{ register ? 'UN NUEVO COMIENZO' : 'TU COMUNIDAD TE ESPERA' }}
+        </div>
+        <h2>
+          {{ register ? 'Aquí comienza tu' : 'Volvamos a' }}<br /><span>{{
+            register ? 'próxima historia.' : 'encontrarnos.'
+          }}</span>
+        </h2>
+        <p class="intro">
+          {{
+            register
+              ? 'Crea tu cuenta. El próximo «¿te sumas?» puede ser para ti.'
+              : 'Ingresa a Falta Uno y da el primer paso para moverte con otros.'
+          }}
+        </p>
+        <div class="tabs">
+          <a routerLink="/iniciar-sesion" [class.selected]="!register">Iniciar sesión</a
+          ><a routerLink="/registro" [class.selected]="register">Crear cuenta</a>
+        </div>
+        @if (notice()) {
+          <div class="success" role="status">
+            {{ notice() }} <a routerLink="/iniciar-sesion">Ir a iniciar sesión →</a>
+          </div>
+        }
+        @if (error()) {
+          <p class="alert" role="alert">{{ error() }}</p>
+        }
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          @if (register) {
+            <label for="nombre">¿Cómo te llamas?</label
+            ><input
+              id="nombre"
+              formControlName="nombre_publico"
+              autocomplete="nickname"
+              placeholder="Tu nombre público"
+              maxlength="100"
+              [attr.aria-invalid]="invalid('nombre_publico')"
+            />
+            @if (invalid('nombre_publico')) {
+              <small class="field-error">Escribe entre 2 y 100 caracteres.</small>
+            }
+          }
+          <label for="correo">Correo electrónico</label
+          ><input
+            id="correo"
+            type="email"
+            formControlName="correo"
+            autocomplete="email"
+            placeholder="tu@correo.cl"
+            maxlength="254"
+            [attr.aria-invalid]="invalid('correo')"
+          />
+          @if (invalid('correo')) {
+            <small class="field-error">Ingresa un correo electrónico válido.</small>
+          }
+          <label for="password">Contraseña</label>
+          <div class="password-field">
+            <input
+              id="password"
+              [type]="showPassword() ? 'text' : 'password'"
+              formControlName="password"
+              [autocomplete]="register ? 'new-password' : 'current-password'"
+              [placeholder]="register ? 'Al menos 15 caracteres' : 'Tu contraseña'"
+              maxlength="128"
+              [attr.aria-invalid]="invalid('password')"
+            /><button
+              type="button"
+              (click)="showPassword.set(!showPassword())"
+              [attr.aria-pressed]="showPassword()"
+              aria-label="Mostrar u ocultar contraseña"
+            >
+              {{ showPassword() ? 'Ocultar' : 'Ver' }}
+            </button>
+          </div>
+          @if (invalid('password')) {
+            <small class="field-error">{{
+              register
+                ? 'Usa entre 15 y 128 caracteres; puedes usar una frase.'
+                : 'Ingresa tu contraseña.'
+            }}</small>
+          }
+          @if (register) {
+            <p class="hint">Una frase larga es fácil de recordar. Incluye espacios si quieres.</p>
+            <label class="checkbox"
+              ><input type="checkbox" formControlName="mayoria_edad" />
+              <span>Confirmo que tengo 18 años o más.</span></label
+            >
+            @if (invalid('mayoria_edad')) {
+              <small class="field-error">Debes confirmar tu mayoría de edad.</small>
+            }
+          }
+          <button class="primary" type="submit" [disabled]="busy() || !!notice()">
+            {{ busy() ? 'Un momento…' : register ? 'Ser parte de Falta Uno' : 'Entrar a Falta Uno'
+            }}<span>↗</span>
+          </button>
+        </form>
+        <p class="form-bottom">
+          {{ register ? '¿Ya eres parte?' : '¿Es tu primera vez por aquí?' }}
+          <a [routerLink]="register ? '/iniciar-sesion' : '/registro'">{{
+            register ? 'Inicia sesión' : 'Súmate a la comunidad'
+          }}</a>
+        </p>
+      }
+    </div>
+    <footer class="right-footer">Falta Uno <span>Más movimiento. Más encuentros.</span></footer>
+  </section>
+</main>

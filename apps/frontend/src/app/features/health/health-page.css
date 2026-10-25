@@ -1,0 +1,247 @@
+:host {
+  display: block;
+  color: #173b36;
+}
+.page {
+  max-width: 1160px;
+  margin: auto;
+  padding: 32px 32px 22px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.brand-mark {
+  display: grid;
+  place-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #173b36;
+  color: #f8faf5;
+  border-radius: 12px;
+  font-size: 27px;
+}
+.brand-mark span {
+  position: absolute;
+  color: #bdf175;
+  right: 5px;
+  bottom: 4px;
+}
+.intro {
+  margin: 64px 0 36px;
+  max-width: 620px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  color: #55736b;
+}
+h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 16px 0 20px;
+}
+.intro p {
+  max-width: 460px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #61736c;
+}
+.status-panel {
+  background: #fff;
+  border: 1px solid #dde6db;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 14px 48px #173b3606;
+}
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+h2 {
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  margin: 8px 0 0;
+}
+.summary,
+.service-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #65736b;
+}
+.summary {
+  white-space: nowrap;
+  background: #f0f3ec;
+  padding: 9px 12px;
+  border-radius: 100px;
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.good {
+  color: #28724b;
+}
+.summary.good {
+  background: #edf7df;
+}
+.warning {
+  color: #935b1e;
+}
+.summary.warning {
+  background: #fff2df;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 28px;
+}
+.service {
+  padding: 20px;
+  border: 1px solid #e3e9df;
+  border-radius: 12px;
+}
+.step {
+  font-size: 11px;
+  font-weight: 650;
+  color: #879b8e;
+}
+h3 {
+  font-size: 16px;
+  margin: 21px 0 7px;
+}
+.service p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6e7c73;
+  margin: 0 0 23px;
+}
+.result {
+  margin: 21px 0;
+  border-radius: 10px;
+  background: #f6f8f2;
+  padding: 15px 18px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #4a6256;
+}
+.result p {
+  margin: 0;
+}
+.panel-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.panel-footer p {
+  font-size: 11px;
+  color: #718077;
+  margin: 0;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 12px 17px;
+  border: 0;
+  border-radius: 8px;
+  background: #173b36;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+button:hover:not(:disabled) {
+  background: #28594d;
+}
+button:focus-visible {
+  outline: 3px solid #98c557;
+  outline-offset: 3px;
+}
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.next-step {
+  font-size: 12px;
+  color: #738378;
+  margin: 25px 0 50px;
+  text-align: center;
+}
+.page-footer {
+  padding-top: 18px;
+  border-top: 1px solid #dfe6db;
+  font-size: 11px;
+  color: #78877a;
+  line-height: 1.8;
+}
+.page-footer span {
+  padding: 0 9px;
+}
+@media (max-width: 640px) {
+  .page {
+    padding: 22px 18px;
+  }
+  .intro {
+    margin-top: 40px;
+  }
+  .status-panel {
+    padding: 20px;
+  }
+  .panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .services {
+    grid-template-columns: 1fr;
+  }
+  .service {
+    position: relative;
+    padding: 18px;
+  }
+  .service .step {
+    display: none;
+  }
+  .service h3 {
+    margin: 0 0 7px;
+  }
+  .service p {
+    max-width: 70%;
+    margin: 0;
+  }
+  .service-status {
+    margin-top: 14px;
+  }
+  .panel-footer {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+  .panel-footer p {
+    text-align: center;
+  }
+  h1 {
+    letter-spacing: -1.3px;
+  }
+  .next-step {
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+}

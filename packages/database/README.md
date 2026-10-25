@@ -1,5 +1,14 @@
 # Base de datos: datos iniciales y permisos
 
+El paquete tambien exporta `PrismaClient` y `PrismaPg` como
+`@comunidad/database` para el backend. `npm.cmd run build` genera el cliente
+ESM y lo compila a `dist` sin necesitar credenciales de la base. El backend
+usa esta dependencia local en lugar de duplicar el esquema.
+
+`npm.cmd run backend:env` prepara el `.env` local del backend con el usuario
+limitado de Docker, conservando cualquier archivo existente. Consultar las
+[instrucciones del backend](../../apps/backend/README.md).
+
 Ejecutar desde `packages/database`, con las dependencias instaladas y el esquema
 creado mediante las migraciones. Requiere Node.js 24 (ejecuta estos archivos
 TypeScript directamente) y PostgreSQL local en `127.0.0.1:5432`.

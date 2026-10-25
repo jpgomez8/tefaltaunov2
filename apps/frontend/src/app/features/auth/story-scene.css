@@ -1,0 +1,52 @@
+.story {
+  isolation: isolate;
+  background: #081b33 url('/images/falta-uno-navy.png') center / cover no-repeat;
+  min-height: 950px;
+  padding: 42px 8%;
+}
+.story::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #071a33ed 0%, #071a33b3 44%, #071a3315 100%), linear-gradient(0deg, #071a33f5, transparent 45%);
+}
+.brand { font-style: italic; text-transform: uppercase; font-size: 36px; gap: 12px; }
+.brand small { font-style: normal; color: #e1eaf7; font-size: 8px; }
+.story-copy { margin-top: 68px; }
+.story-copy > p:last-child { color: #e1eaf7; text-shadow: 0 2px 12px #071a33; }
+.eyebrow { font-size: 9px; line-height: 1.8; letter-spacing: 1.8px; }
+.eyebrow span { border-radius: 0; width: 24px; height: 3px; flex-shrink: 0; }
+h1 { font-size: clamp(36px, 3.45vw, 58px); text-shadow: 0 3px 30px #071a3370; }
+.orbit { width: 310px; height: 310px; margin: 55px auto 40px; border-color: #b8f15b55; box-shadow: 0 0 45px #62baff0f, inset 0 0 40px #62baff08; }
+.orbit-inner { border-color: #c5f36b40; }
+.sport { width: 100px; height: 116px; flex-direction: column; gap: 7px; border-radius: 20px; border-color: #a6ddda80; background: linear-gradient(145deg, #12345bed, #081b33e8); box-shadow: 0 0 20px #7fdcff15, inset 0 0 15px #7fdcff15; backdrop-filter: blur(8px); }
+.sport svg { width: 34px; height: 34px; }
+.sport small { position: static; font-size: 9px; font-weight: 800; color: #fff; }
+.sport-caption { font-size: 8px; line-height: 1.5; color: #d6e5fa; text-align: center; }
+.s1 { top: -9px; left: -6px; }
+.s2 { top: 53px; right: -15px; background: #c5f36b; color: #0b223b; border-color: #dcff8d; box-shadow: 0 0 28px #c5f36b25; }
+.s2 small, .s2 .sport-caption { color: #0b223b; }
+.s3 { bottom: -21px; left: 60px; }
+.join-mark { top: 106px; left: 107px; text-shadow: 0 0 24px #c5f36b70; }
+.join-mark small { font-weight: 750; }
+.story footer { color: #d8e7f7; text-transform: uppercase; letter-spacing: 1.8px; font-size: 8px; border-top: 1px solid #e1eaf740; padding-top: 20px; position: relative; }
+@media (min-width: 1600px) { .story { padding-left: 12%; padding-right: 12%; } }
+@media (min-width: 701px) and (max-width: 950px) {
+  .story { padding: 35px 7%; }
+  .brand { font-size: 29px; }
+  .brand img { width: 45px; height: 45px; }
+  .brand small { font-size: 6px; }
+  .orbit { width: 260px; height: 260px; }
+  .join-mark { top: 88px; left: 85px; }
+  .sport { width: 88px; height: 110px; }
+}
+@media (max-width: 700px) {
+  .story { min-height: 440px; padding: 27px 7% 35px; background-position: center 35%; }
+  .story::before { background: linear-gradient(90deg, #071a33eb, #071a33b0 55%, #071a3340), linear-gradient(0deg, #071a33c0, transparent); }
+  .brand { font-size: 29px; }
+  .story-copy { margin-top: 35px; }
+  h1 { font-size: 35px; max-width: 340px; }
+  .eyebrow { font-size: 8px; letter-spacing: 1.2px; }
+  .story-copy > p:last-child { font-size: 12px; }
+}

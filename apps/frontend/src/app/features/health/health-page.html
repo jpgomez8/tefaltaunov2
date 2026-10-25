@@ -1,0 +1,83 @@
+<div class="page">
+  <header class="brand">
+    <img src="images/falta-uno-logo-azul.png" width="210" height="93" alt="Falta Uno. El deporte nos encuentra." style="background: #081b33; border-radius: 12px; padding: 12px; object-fit: contain;" />
+  </header>
+
+  <main>
+    <div class="intro">
+      <span class="eyebrow">PRIMERA CONEXIÓN</span>
+      <h1>Una comunidad<br />empieza conectando.</h1>
+      <p>
+        Ya tenemos el primer paso: comprobar que la plataforma está lista para seguir creciendo.
+      </p>
+    </div>
+
+    <section class="status-panel" aria-labelledby="status-title" [attr.aria-busy]="checking()">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">ESTADO DE LA PLATAFORMA</span>
+          <h2 id="status-title">Conexión de los servicios</h2>
+        </div>
+        <span class="summary" [class.good]="connected()" [class.warning]="hasError()">
+          <span class="dot" aria-hidden="true"></span>
+          {{ checking() ? 'Comprobando' : connected() ? 'Todo conectado' : 'Revisar conexión' }}
+        </span>
+      </div>
+
+      <div class="services">
+        <article class="service">
+          <span class="step" aria-hidden="true">01</span>
+          <h3>Aplicación web</h3>
+          <p>El punto de encuentro de tu comunidad.</p>
+          <span class="service-status good"><span class="dot" aria-hidden="true"></span>Lista</span>
+        </article>
+        <article class="service">
+          <span class="step" aria-hidden="true">02</span>
+          <h3>API</h3>
+          <p>Conecta la aplicación con sus servicios.</p>
+          <span
+            class="service-status"
+            [class.good]="connected() || state() === 'database-down'"
+            [class.warning]="hasError() && state() !== 'database-down'"
+            ><span class="dot" aria-hidden="true"></span>{{ apiStatus() }}</span
+          >
+        </article>
+        <article class="service">
+          <span class="step" aria-hidden="true">03</span>
+          <h3>Base de datos</h3>
+          <p>El espacio que guarda la información.</p>
+          <span
+            class="service-status"
+            [class.good]="connected()"
+            [class.warning]="state() === 'database-down'"
+            ><span class="dot" aria-hidden="true"></span>{{ databaseStatus() }}</span
+          >
+        </article>
+      </div>
+
+      <div class="result" role="status" aria-live="polite" aria-atomic="true">
+        <p>{{ message() }}</p>
+      </div>
+
+      <div class="panel-footer">
+        <p>
+          {{
+            lastChecked()
+              ? 'Última comprobación: ' + lastChecked()
+              : 'Primera comprobación en curso'
+          }}
+        </p>
+        <button type="button" (click)="checkConnection()" [disabled]="checking()">
+          {{ checking() ? 'Comprobando…' : 'Volver a comprobar' }}<span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </section>
+    <p class="next-step">
+      Una base lista para lo que viene: encontrarnos, movernos y hacer deporte juntos.
+    </p>
+  </main>
+  <footer class="page-footer">
+    Entorno de desarrollo <span>·</span> Las funciones deportivas se incorporarán en las próximas
+    etapas.
+  </footer>
+</div>

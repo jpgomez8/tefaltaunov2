@@ -1,0 +1,14 @@
+node_modules/
+generated/
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Herramientas y exportaciones locales de preparacion
+.agents/
+.claude/
+.windsurf/
+skills-lock.json
+prisma/baseline-original.sql
+prisma.baseline.config copy.ts

@@ -1,0 +1,10 @@
+node_modules
+generated
+.env
+.env.*
+.agents
+.claude
+.windsurf
+*.backup
+*.dump
+prisma/baseline-original.sql

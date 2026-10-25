@@ -1,0 +1,447 @@
+generator client {
+  provider        = "prisma-client"
+  output          = "../generated/prisma"
+  previewFeatures = ["partialIndexes"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model actividades {
+  id                      String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  codigo                  String                    @unique(map: "actividades_codigo_unique") @db.VarChar(50)
+  nombre                  String                    @db.VarChar(100)
+  descripcion             String?
+  activo                  Boolean                   @default(true)
+  creado_en               DateTime                  @default(now()) @db.Timestamptz(6)
+  actualizado_en          DateTime                  @default(now()) @db.Timestamptz(6)
+  encuentros              encuentros[]
+  intenciones             intenciones[]
+  preferencias_deportivas preferencias_deportivas[]
+  propuestas_grupo        propuestas_grupo[]
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model asistencias {
+  id                             String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  inscripcion_id                 String        @unique(map: "asistencias_inscripcion_unique") @db.Uuid
+  registrada_por_id              String?       @db.Uuid
+  estado                         String        @default("sin_verificar") @db.VarChar(20)
+  observacion                    String?       @db.VarChar(500)
+  confirmada_por_participante_en DateTime?     @db.Timestamptz(6)
+  creado_en                      DateTime      @default(now()) @db.Timestamptz(6)
+  actualizado_en                 DateTime      @default(now()) @db.Timestamptz(6)
+  inscripciones                  inscripciones @relation(fields: [inscripcion_id], references: [id], onUpdate: NoAction, map: "asistencias_inscripcion_fk")
+  usuarios                       usuarios?     @relation(fields: [registrada_por_id], references: [id], onUpdate: NoAction, map: "asistencias_registrador_fk")
+
+  @@index([registrada_por_id], map: "asistencias_registrador_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model auditoria {
+  id             String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  actor_id       String?   @db.Uuid
+  accion         String    @db.VarChar(100)
+  entidad        String    @db.VarChar(100)
+  registro_id    String?   @db.Uuid
+  resultado      String    @default("exito") @db.VarChar(20)
+  datos          Json      @default("{}")
+  correlacion_id String?   @db.Uuid
+  creado_en      DateTime  @default(now()) @db.Timestamptz(6)
+  usuarios       usuarios? @relation(fields: [actor_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "auditoria_actor_fk")
+
+  @@index([actor_id, creado_en], map: "auditoria_actor_fecha_idx")
+  @@index([correlacion_id], map: "auditoria_correlacion_idx")
+  @@index([creado_en], map: "auditoria_fecha_idx")
+  @@index([entidad, registro_id, creado_en], map: "auditoria_recurso_fecha_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model comunas {
+  id               String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  region_id        String             @db.Uuid
+  codigo           String             @db.VarChar(20)
+  nombre           String             @db.VarChar(150)
+  activo           Boolean            @default(true)
+  creado_en        DateTime           @default(now()) @db.Timestamptz(6)
+  actualizado_en   DateTime           @default(now()) @db.Timestamptz(6)
+  regiones         regiones           @relation(fields: [region_id], references: [id], onUpdate: NoAction, map: "comunas_region_fk")
+  intenciones      intenciones[]
+  lugares          lugares[]
+  propuestas_grupo propuestas_grupo[]
+
+  @@unique([region_id, codigo], map: "comunas_region_codigo_unique")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model disponibilidades_intencion {
+  id             String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  intencion_id   String      @db.Uuid
+  inicio_en      DateTime    @db.Timestamptz(6)
+  fin_en         DateTime    @db.Timestamptz(6)
+  zona_horaria   String      @db.VarChar(64)
+  creado_en      DateTime    @default(now()) @db.Timestamptz(6)
+  actualizado_en DateTime    @default(now()) @db.Timestamptz(6)
+  intenciones    intenciones @relation(fields: [intencion_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "disponibilidades_intencion_fk")
+
+  @@unique([intencion_id, inicio_en, fin_en], map: "disponibilidades_franja_unique")
+  @@index([inicio_en, fin_en], map: "disponibilidades_horario_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model encuentros {
+  id                        String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  actividad_id              String               @db.Uuid
+  lugar_id                  String               @db.Uuid
+  organizador_id            String               @db.Uuid
+  titulo                    String               @db.VarChar(150)
+  descripcion               String?
+  modalidad                 String?              @db.VarChar(50)
+  inicio_en                 DateTime             @db.Timestamptz(6)
+  fin_en                    DateTime             @db.Timestamptz(6)
+  zona_horaria              String               @db.VarChar(64)
+  inscripciones_hasta       DateTime?            @db.Timestamptz(6)
+  minimo_participantes      Int                  @default(2)
+  maximo_participantes      Int
+  nivel_requerido           String               @default("todos") @db.VarChar(30)
+  intensidad                String?              @db.VarChar(20)
+  materiales                String?
+  accesibilidad_descripcion String?
+  detalles_actividad        Json                 @default("{}")
+  visibilidad               String               @default("publico") @db.VarChar(20)
+  estado                    String               @default("borrador") @db.VarChar(20)
+  motivo_cancelacion        String?
+  cancelado_en              DateTime?            @db.Timestamptz(6)
+  creado_en                 DateTime             @default(now()) @db.Timestamptz(6)
+  actualizado_en            DateTime             @default(now()) @db.Timestamptz(6)
+  actividades               actividades          @relation(fields: [actividad_id], references: [id], onUpdate: NoAction, map: "encuentros_actividad_fk")
+  lugares                   lugares              @relation(fields: [lugar_id], references: [id], onUpdate: NoAction, map: "encuentros_lugar_fk")
+  usuarios                  usuarios             @relation(fields: [organizador_id], references: [id], onUpdate: NoAction, map: "encuentros_organizador_fk")
+  inscripciones             inscripciones[]
+  mensajes_encuentro        mensajes_encuentro[]
+  notificaciones            notificaciones[]
+  propuestas_grupo          propuestas_grupo?
+  reportes                  reportes[]
+
+  @@index([actividad_id, inicio_en], map: "encuentros_actividad_inicio_idx")
+  @@index([estado, inicio_en], map: "encuentros_estado_inicio_idx")
+  @@index([lugar_id], map: "encuentros_lugar_idx")
+  @@index([organizador_id], map: "encuentros_organizador_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model identidades_autenticacion {
+  id                      String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  usuario_id              String   @db.Uuid
+  proveedor               String   @db.VarChar(50)
+  identificador_proveedor String   @db.VarChar(255)
+  creado_en               DateTime @default(now()) @db.Timestamptz(6)
+  actualizado_en          DateTime @default(now()) @db.Timestamptz(6)
+  usuarios                usuarios @relation(fields: [usuario_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "identidades_usuario_fk")
+
+  @@unique([proveedor, identificador_proveedor], map: "identidades_proveedor_identificador_unique")
+  @@unique([usuario_id, proveedor], map: "identidades_usuario_proveedor_unique")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model inscripciones {
+  id                       String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  encuentro_id             String       @db.Uuid
+  usuario_id               String       @db.Uuid
+  estado                   String       @default("confirmada") @db.VarChar(30)
+  en_espera_desde          DateTime?    @db.Timestamptz(6)
+  oferta_expira_en         DateTime?    @db.Timestamptz(6)
+  reconfirmacion_expira_en DateTime?    @db.Timestamptz(6)
+  motivo_cancelacion       String?
+  creado_en                DateTime     @default(now()) @db.Timestamptz(6)
+  actualizado_en           DateTime     @default(now()) @db.Timestamptz(6)
+  asistencias              asistencias?
+  encuentros               encuentros   @relation(fields: [encuentro_id], references: [id], onUpdate: NoAction, map: "inscripciones_encuentro_fk")
+  usuarios                 usuarios     @relation(fields: [usuario_id], references: [id], onUpdate: NoAction, map: "inscripciones_usuario_fk")
+
+  @@unique([encuentro_id, usuario_id], map: "inscripciones_encuentro_usuario_unique")
+  @@index([encuentro_id, estado], map: "inscripciones_encuentro_estado_idx")
+  @@index([encuentro_id, en_espera_desde, creado_en, id], map: "inscripciones_lista_espera_idx", where: raw("((estado)::text = 'en_espera'::text)"))
+  @@index([oferta_expira_en], map: "inscripciones_ofertas_idx", where: raw("((estado)::text = 'plaza_ofrecida'::text)"))
+  @@index([reconfirmacion_expira_en], map: "inscripciones_reconfirmaciones_idx", where: raw("((estado)::text = 'reconfirmacion_pendiente'::text)"))
+  @@index([usuario_id], map: "inscripciones_usuario_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model intenciones {
+  id                         String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  usuario_id                 String                       @db.Uuid
+  actividad_id               String                       @db.Uuid
+  comuna_id                  String                       @db.Uuid
+  descripcion                String?                      @db.VarChar(1000)
+  nivel                      String                       @default("principiante") @db.VarChar(30)
+  intensidad                 String?                      @db.VarChar(20)
+  puede_organizar            Boolean                      @default(false)
+  latitud_referencia         Decimal?                     @db.Decimal(9, 6)
+  longitud_referencia        Decimal?                     @db.Decimal(9, 6)
+  radio_busqueda_metros      Int                          @default(5000)
+  estado                     String                       @default("activa") @db.VarChar(20)
+  vigente_hasta              DateTime                     @db.Timestamptz(6)
+  creado_en                  DateTime                     @default(now()) @db.Timestamptz(6)
+  actualizado_en             DateTime                     @default(now()) @db.Timestamptz(6)
+  disponibilidades_intencion disponibilidades_intencion[]
+  actividades                actividades                  @relation(fields: [actividad_id], references: [id], onUpdate: NoAction, map: "intenciones_actividad_fk")
+  comunas                    comunas                      @relation(fields: [comuna_id], references: [id], onUpdate: NoAction, map: "intenciones_comuna_fk")
+  usuarios                   usuarios                     @relation(fields: [usuario_id], references: [id], onUpdate: NoAction, map: "intenciones_usuario_fk")
+  miembros_propuesta         miembros_propuesta[]
+
+  @@unique([id, usuario_id], map: "intenciones_id_usuario_unique")
+  @@index([actividad_id, comuna_id, estado, vigente_hasta], map: "intenciones_busqueda_idx")
+  @@index([comuna_id], map: "intenciones_comuna_idx")
+  @@index([usuario_id], map: "intenciones_usuario_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model lugares {
+  id               String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  comuna_id        String             @db.Uuid
+  creado_por_id    String?            @db.Uuid
+  nombre           String             @db.VarChar(150)
+  descripcion      String?
+  direccion        String?            @db.VarChar(255)
+  tipo             String             @default("punto_encuentro") @db.VarChar(30)
+  latitud          Decimal            @db.Decimal(9, 6)
+  longitud         Decimal            @db.Decimal(9, 6)
+  zona_horaria     String             @db.VarChar(64)
+  activo           Boolean            @default(true)
+  creado_en        DateTime           @default(now()) @db.Timestamptz(6)
+  actualizado_en   DateTime           @default(now()) @db.Timestamptz(6)
+  encuentros       encuentros[]
+  comunas          comunas            @relation(fields: [comuna_id], references: [id], onUpdate: NoAction, map: "lugares_comuna_fk")
+  usuarios         usuarios?          @relation(fields: [creado_por_id], references: [id], onUpdate: NoAction, map: "lugares_creador_fk")
+  propuestas_grupo propuestas_grupo[]
+
+  @@index([comuna_id], map: "lugares_comuna_idx")
+  @@index([creado_por_id], map: "lugares_creador_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model mensajes_encuentro {
+  id                       String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  encuentro_id             String               @db.Uuid
+  autor_id                 String               @db.Uuid
+  respuesta_a_id           String?              @db.Uuid
+  tipo                     String               @default("mensaje") @db.VarChar(20)
+  contenido                String
+  fijado                   Boolean              @default(false)
+  editado_en               DateTime?            @db.Timestamptz(6)
+  eliminado_en             DateTime?            @db.Timestamptz(6)
+  creado_en                DateTime             @default(now()) @db.Timestamptz(6)
+  actualizado_en           DateTime             @default(now()) @db.Timestamptz(6)
+  usuarios                 usuarios             @relation(fields: [autor_id], references: [id], onUpdate: NoAction, map: "mensajes_autor_fk")
+  encuentros               encuentros           @relation(fields: [encuentro_id], references: [id], onUpdate: NoAction, map: "mensajes_encuentro_fk")
+  mensajes_encuentro       mensajes_encuentro?  @relation("mensajes_encuentroTomensajes_encuentro", fields: [respuesta_a_id, encuentro_id], references: [id, encuentro_id], onUpdate: NoAction, map: "mensajes_respuesta_mismo_encuentro_fk")
+  other_mensajes_encuentro mensajes_encuentro[] @relation("mensajes_encuentroTomensajes_encuentro")
+  reportes                 reportes[]
+
+  @@unique([id, encuentro_id], map: "mensajes_id_encuentro_unique")
+  @@index([autor_id], map: "mensajes_autor_idx")
+  @@index([encuentro_id, creado_en, id], map: "mensajes_encuentro_fecha_idx")
+  @@index([respuesta_a_id, encuentro_id], map: "mensajes_respuesta_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model miembros_propuesta {
+  id               String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  propuesta_id     String           @db.Uuid
+  usuario_id       String           @db.Uuid
+  intencion_id     String?          @db.Uuid
+  estado           String           @default("pendiente") @db.VarChar(20)
+  respondido_en    DateTime?        @db.Timestamptz(6)
+  creado_en        DateTime         @default(now()) @db.Timestamptz(6)
+  actualizado_en   DateTime         @default(now()) @db.Timestamptz(6)
+  intenciones      intenciones?     @relation(fields: [intencion_id, usuario_id], references: [id, usuario_id], onUpdate: NoAction, map: "miembros_propuesta_intencion_usuario_fk")
+  propuestas_grupo propuestas_grupo @relation(fields: [propuesta_id], references: [id], onUpdate: NoAction, map: "miembros_propuesta_propuesta_fk")
+  usuarios         usuarios         @relation(fields: [usuario_id], references: [id], onUpdate: NoAction, map: "miembros_propuesta_usuario_fk")
+
+  @@unique([propuesta_id, usuario_id], map: "miembros_propuesta_usuario_unique")
+  @@index([propuesta_id, estado], map: "miembros_propuesta_estado_idx")
+  @@index([intencion_id, usuario_id], map: "miembros_propuesta_intencion_usuario_idx")
+  @@index([usuario_id], map: "miembros_propuesta_usuario_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model notificaciones {
+  id                  String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  usuario_id          String            @db.Uuid
+  encuentro_id        String?           @db.Uuid
+  propuesta_id        String?           @db.Uuid
+  tipo                String            @db.VarChar(60)
+  titulo              String            @db.VarChar(150)
+  contenido           String            @db.VarChar(1500)
+  datos               Json              @default("{}")
+  clave_deduplicacion String?           @db.VarChar(200)
+  leida_en            DateTime?         @db.Timestamptz(6)
+  creado_en           DateTime          @default(now()) @db.Timestamptz(6)
+  actualizado_en      DateTime          @default(now()) @db.Timestamptz(6)
+  encuentros          encuentros?       @relation(fields: [encuentro_id], references: [id], onUpdate: NoAction, map: "notificaciones_encuentro_fk")
+  propuestas_grupo    propuestas_grupo? @relation(fields: [propuesta_id], references: [id], onUpdate: NoAction, map: "notificaciones_propuesta_fk")
+  usuarios            usuarios          @relation(fields: [usuario_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "notificaciones_usuario_fk")
+
+  @@unique([usuario_id, clave_deduplicacion], map: "notificaciones_deduplicacion_unique")
+  @@index([encuentro_id], map: "notificaciones_encuentro_idx")
+  @@index([usuario_id, creado_en], map: "notificaciones_no_leidas_idx", where: raw("(leida_en IS NULL)"))
+  @@index([propuesta_id], map: "notificaciones_propuesta_idx")
+  @@index([usuario_id, creado_en, id], map: "notificaciones_usuario_fecha_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model paises {
+  id             String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  codigo         String     @unique(map: "paises_codigo_unique") @db.VarChar(2)
+  nombre         String     @db.VarChar(100)
+  activo         Boolean    @default(true)
+  creado_en      DateTime   @default(now()) @db.Timestamptz(6)
+  actualizado_en DateTime   @default(now()) @db.Timestamptz(6)
+  regiones       regiones[]
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model preferencias_deportivas {
+  id                   String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  usuario_id           String      @db.Uuid
+  actividad_id         String      @db.Uuid
+  nivel                String      @default("principiante") @db.VarChar(30)
+  intensidad_preferida String?     @db.VarChar(20)
+  creado_en            DateTime    @default(now()) @db.Timestamptz(6)
+  actualizado_en       DateTime    @default(now()) @db.Timestamptz(6)
+  actividades          actividades @relation(fields: [actividad_id], references: [id], onUpdate: NoAction, map: "preferencias_actividad_fk")
+  usuarios             usuarios    @relation(fields: [usuario_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "preferencias_usuario_fk")
+
+  @@unique([usuario_id, actividad_id], map: "preferencias_usuario_actividad_unique")
+  @@index([actividad_id], map: "preferencias_actividad_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model propuestas_grupo {
+  id                       String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  actividad_id             String               @db.Uuid
+  comuna_id                String               @db.Uuid
+  lugar_id                 String?              @db.Uuid
+  organizador_propuesto_id String?              @db.Uuid
+  encuentro_id             String?              @unique(map: "propuestas_encuentro_unique") @db.Uuid
+  titulo                   String               @db.VarChar(150)
+  descripcion              String?
+  inicio_propuesto_en      DateTime?            @db.Timestamptz(6)
+  fin_propuesto_en         DateTime?            @db.Timestamptz(6)
+  zona_horaria             String?              @db.VarChar(64)
+  minimo_participantes     Int                  @default(2)
+  maximo_participantes     Int
+  estado                   String               @default("borrador") @db.VarChar(30)
+  vence_en                 DateTime             @db.Timestamptz(6)
+  creado_en                DateTime             @default(now()) @db.Timestamptz(6)
+  actualizado_en           DateTime             @default(now()) @db.Timestamptz(6)
+  miembros_propuesta       miembros_propuesta[]
+  notificaciones           notificaciones[]
+  actividades              actividades          @relation(fields: [actividad_id], references: [id], onUpdate: NoAction, map: "propuestas_actividad_fk")
+  comunas                  comunas              @relation(fields: [comuna_id], references: [id], onUpdate: NoAction, map: "propuestas_comuna_fk")
+  encuentros               encuentros?          @relation(fields: [encuentro_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "propuestas_encuentro_fk")
+  lugares                  lugares?             @relation(fields: [lugar_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "propuestas_lugar_fk")
+  usuarios                 usuarios?            @relation(fields: [organizador_propuesto_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "propuestas_organizador_fk")
+
+  @@index([actividad_id, comuna_id, estado, vence_en], map: "propuestas_busqueda_idx")
+  @@index([comuna_id], map: "propuestas_comuna_idx")
+  @@index([lugar_id], map: "propuestas_lugar_idx")
+  @@index([organizador_propuesto_id], map: "propuestas_organizador_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model regiones {
+  id             String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  pais_id        String    @db.Uuid
+  codigo         String    @db.VarChar(20)
+  nombre         String    @db.VarChar(150)
+  activo         Boolean   @default(true)
+  creado_en      DateTime  @default(now()) @db.Timestamptz(6)
+  actualizado_en DateTime  @default(now()) @db.Timestamptz(6)
+  comunas        comunas[]
+  paises         paises    @relation(fields: [pais_id], references: [id], onUpdate: NoAction, map: "regiones_pais_fk")
+
+  @@unique([pais_id, codigo], map: "regiones_pais_codigo_unique")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model reportes {
+  id                                               String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  denunciante_id                                   String?             @db.Uuid
+  asignado_a_id                                    String?             @db.Uuid
+  usuario_reportado_id                             String?             @db.Uuid
+  encuentro_reportado_id                           String?             @db.Uuid
+  mensaje_reportado_id                             String?             @db.Uuid
+  categoria                                        String              @db.VarChar(40)
+  descripcion                                      String
+  estado                                           String              @default("recibido") @db.VarChar(20)
+  resolucion                                       String?
+  resuelto_en                                      DateTime?           @db.Timestamptz(6)
+  creado_en                                        DateTime            @default(now()) @db.Timestamptz(6)
+  actualizado_en                                   DateTime            @default(now()) @db.Timestamptz(6)
+  usuarios_reportes_asignado_a_idTousuarios        usuarios?           @relation("reportes_asignado_a_idTousuarios", fields: [asignado_a_id], references: [id], onUpdate: NoAction, map: "reportes_asignado_fk")
+  usuarios_reportes_denunciante_idTousuarios       usuarios?           @relation("reportes_denunciante_idTousuarios", fields: [denunciante_id], references: [id], onUpdate: NoAction, map: "reportes_denunciante_fk")
+  encuentros                                       encuentros?         @relation(fields: [encuentro_reportado_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "reportes_encuentro_reportado_fk")
+  mensajes_encuentro                               mensajes_encuentro? @relation(fields: [mensaje_reportado_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "reportes_mensaje_reportado_fk")
+  usuarios_reportes_usuario_reportado_idTousuarios usuarios?           @relation("reportes_usuario_reportado_idTousuarios", fields: [usuario_reportado_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "reportes_usuario_reportado_fk")
+
+  @@index([asignado_a_id], map: "reportes_asignado_idx")
+  @@index([denunciante_id], map: "reportes_denunciante_idx")
+  @@index([encuentro_reportado_id], map: "reportes_encuentro_reportado_idx")
+  @@index([estado, creado_en], map: "reportes_estado_fecha_idx")
+  @@index([mensaje_reportado_id], map: "reportes_mensaje_reportado_idx")
+  @@index([usuario_reportado_id], map: "reportes_usuario_reportado_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model sesiones {
+  id                    String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  usuario_id            String    @db.Uuid
+  token_renovacion_hash String    @unique(map: "sesiones_token_hash_unique")
+  nombre_dispositivo    String?   @db.VarChar(150)
+  expira_en             DateTime  @db.Timestamptz(6)
+  revocada_en           DateTime? @db.Timestamptz(6)
+  ultimo_uso_en         DateTime  @default(now()) @db.Timestamptz(6)
+  creado_en             DateTime  @default(now()) @db.Timestamptz(6)
+  actualizado_en        DateTime  @default(now()) @db.Timestamptz(6)
+  usuarios              usuarios  @relation(fields: [usuario_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "sesiones_usuario_fk")
+
+  @@index([expira_en], map: "sesiones_expiracion_idx")
+  @@index([usuario_id], map: "sesiones_usuario_idx")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model usuarios {
+  id                                               String                      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nombre_publico                                   String                      @db.VarChar(100)
+  correo                                           String                      @unique(map: "usuarios_correo_unique") @db.VarChar(254)
+  password_hash                                    String?
+  avatar_url                                       String?
+  biografia                                        String?                     @db.VarChar(500)
+  rol                                              String                      @default("usuario") @db.VarChar(20)
+  estado                                           String                      @default("pendiente_verificacion") @db.VarChar(30)
+  correo_verificado_en                             DateTime?                   @db.Timestamptz(6)
+  mayoria_edad_confirmada_en                       DateTime?                   @db.Timestamptz(6)
+  ultimo_acceso_en                                 DateTime?                   @db.Timestamptz(6)
+  creado_en                                        DateTime                    @default(now()) @db.Timestamptz(6)
+  actualizado_en                                   DateTime                    @default(now()) @db.Timestamptz(6)
+  asistencias                                      asistencias[]
+  auditoria                                        auditoria[]
+  encuentros                                       encuentros[]
+  identidades_autenticacion                        identidades_autenticacion[]
+  inscripciones                                    inscripciones[]
+  intenciones                                      intenciones[]
+  lugares                                          lugares[]
+  mensajes_encuentro                               mensajes_encuentro[]
+  miembros_propuesta                               miembros_propuesta[]
+  notificaciones                                   notificaciones[]
+  preferencias_deportivas                          preferencias_deportivas[]
+  propuestas_grupo                                 propuestas_grupo[]
+  reportes_reportes_asignado_a_idTousuarios        reportes[]                  @relation("reportes_asignado_a_idTousuarios")
+  reportes_reportes_denunciante_idTousuarios       reportes[]                  @relation("reportes_denunciante_idTousuarios")
+  reportes_reportes_usuario_reportado_idTousuarios reportes[]                  @relation("reportes_usuario_reportado_idTousuarios")
+  sesiones                                         sesiones[]
+}

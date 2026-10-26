@@ -1,0 +1,33 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seed": "prisma db seed --config=prisma.migrate.config.ts",
+    "seed:test": "node prisma/seed.ts --database comunidad_deportiva_baseline_test",
+    "test:seed": "node --test prisma/seed.integration.test.ts",
+    "db:permissions": "node scripts/permisos.ts --database comunidad_deportiva_dev",
+    "db:permissions:test": "node scripts/permisos.ts --database comunidad_deportiva_baseline_test",
+    "test:permissions": "node --test scripts/permisos.integration.test.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "dotenv": "17.4.2",
+    "pg": "8.23.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/pg": "8.23.1",
+    "prisma": "7.10.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

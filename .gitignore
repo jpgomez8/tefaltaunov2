@@ -42,3 +42,13 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Credenciales y archivos locales de desarrollo
+.env
+.env.*
+!.env.example
+!.env.*.example
+**/node_modules/
+**/.npm-cache/
+*.backup
+*.dump

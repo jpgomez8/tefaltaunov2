@@ -1,4 +1,13 @@
 {
+  "private": true,
+  "scripts": {
+    "docker:env": "node scripts/preparar-docker.mjs",
+    "docker:up": "node scripts/docker-up.mjs",
+    "docker:status": "node scripts/docker-command.mjs status",
+    "docker:setup": "node scripts/docker-command.mjs setup",
+    "docker:down": "node scripts/docker-command.mjs down",
+    "docker:logs": "node scripts/docker-command.mjs logs"
+  },
   "dependencies": {
     "google-auth-library": "^8.9.0"
   }

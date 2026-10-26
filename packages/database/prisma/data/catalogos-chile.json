@@ -1,0 +1,3176 @@
+{
+  "paises": [
+    {
+      "id": "772dbae5-1fa6-48cf-a1b4-801735c91d1f",
+      "codigo": "CL",
+      "nombre": "Chile",
+      "activo": true
+    }
+  ],
+  "regiones": [
+    {
+      "id": "c4890581-f34b-4ce7-99ea-6c5bf28f9d0c",
+      "pais_codigo": "CL",
+      "codigo": "01",
+      "nombre": "Tarapacá",
+      "activo": true
+    },
+    {
+      "id": "071b1af0-b5f8-4efc-97c5-3edf5c2ce924",
+      "pais_codigo": "CL",
+      "codigo": "02",
+      "nombre": "Antofagasta",
+      "activo": true
+    },
+    {
+      "id": "8041136e-8fee-4301-bd35-0109ac0deb24",
+      "pais_codigo": "CL",
+      "codigo": "03",
+      "nombre": "Atacama",
+      "activo": true
+    },
+    {
+      "id": "80e6d6bb-207c-4afd-a645-223ae25d3039",
+      "pais_codigo": "CL",
+      "codigo": "04",
+      "nombre": "Coquimbo",
+      "activo": true
+    },
+    {
+      "id": "89d7f296-6659-4120-991f-ba1d14180ddf",
+      "pais_codigo": "CL",
+      "codigo": "05",
+      "nombre": "Valparaíso",
+      "activo": true
+    },
+    {
+      "id": "1b02b885-832d-475d-ac9a-0667ba65f779",
+      "pais_codigo": "CL",
+      "codigo": "06",
+      "nombre": "Libertador General Bernardo O'Higgins",
+      "activo": true
+    },
+    {
+      "id": "12be82f3-62b9-40e3-b1f9-a02b89a60680",
+      "pais_codigo": "CL",
+      "codigo": "07",
+      "nombre": "Maule",
+      "activo": true
+    },
+    {
+      "id": "4b8b1db4-f6f1-4fc9-a4bc-277aaea3d1c5",
+      "pais_codigo": "CL",
+      "codigo": "08",
+      "nombre": "Biobío",
+      "activo": true
+    },
+    {
+      "id": "f181d2e3-acfc-46db-a1d7-dff4a7e1edf1",
+      "pais_codigo": "CL",
+      "codigo": "09",
+      "nombre": "La Araucanía",
+      "activo": true
+    },
+    {
+      "id": "e4e741f9-eb39-468e-a351-359f05bdd323",
+      "pais_codigo": "CL",
+      "codigo": "10",
+      "nombre": "Los Lagos",
+      "activo": true
+    },
+    {
+      "id": "f5e39bb7-e289-4b2e-bffd-95b0d0da1c35",
+      "pais_codigo": "CL",
+      "codigo": "11",
+      "nombre": "Aysén del General Carlos Ibáñez del Campo",
+      "activo": true
+    },
+    {
+      "id": "6d83e3a7-078a-4d0e-ade9-d1ab3e75a4ca",
+      "pais_codigo": "CL",
+      "codigo": "12",
+      "nombre": "Magallanes y de la Antártica Chilena",
+      "activo": true
+    },
+    {
+      "id": "dfa6d97b-194b-496a-854b-ded2097efc08",
+      "pais_codigo": "CL",
+      "codigo": "13",
+      "nombre": "Metropolitana de Santiago",
+      "activo": true
+    },
+    {
+      "id": "d856a106-dda6-4f38-879a-c5bfa2927914",
+      "pais_codigo": "CL",
+      "codigo": "14",
+      "nombre": "Los Ríos",
+      "activo": true
+    },
+    {
+      "id": "60057631-1625-4f32-ad03-031665e9b8d4",
+      "pais_codigo": "CL",
+      "codigo": "15",
+      "nombre": "Arica y Parinacota",
+      "activo": true
+    },
+    {
+      "id": "ae47ca15-40d4-4756-9460-14badc6f816e",
+      "pais_codigo": "CL",
+      "codigo": "16",
+      "nombre": "Ñuble",
+      "activo": true
+    }
+  ],
+  "comunas": [
+    {
+      "id": "55954d1e-b96b-4d61-b515-6e0b3d52f9be",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01101",
+      "nombre": "Iquique",
+      "activo": true
+    },
+    {
+      "id": "b80d6dbd-de4d-40e7-96e2-add81a7a9b5f",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01107",
+      "nombre": "Alto Hospicio",
+      "activo": true
+    },
+    {
+      "id": "93fb27d8-8ae8-48b5-b8bd-090a50c18f42",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01401",
+      "nombre": "Pozo Almonte",
+      "activo": true
+    },
+    {
+      "id": "af2b017b-a5ca-46e8-94f6-79c55f522477",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01402",
+      "nombre": "Camiña",
+      "activo": true
+    },
+    {
+      "id": "7503ef09-7fab-4e93-8670-b8a7ba8c3b11",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01403",
+      "nombre": "Colchane",
+      "activo": true
+    },
+    {
+      "id": "24b553a8-3f99-4355-b4a5-30892153e43a",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01404",
+      "nombre": "Huara",
+      "activo": true
+    },
+    {
+      "id": "da5109c5-95cf-4c0a-be9d-de8531b169ae",
+      "pais_codigo": "CL",
+      "region_codigo": "01",
+      "codigo": "01405",
+      "nombre": "Pica",
+      "activo": true
+    },
+    {
+      "id": "af1cd729-e3b1-4354-b4f3-1b53a8a4dc8d",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02101",
+      "nombre": "Antofagasta",
+      "activo": true
+    },
+    {
+      "id": "d162f779-8bf6-4e2e-9fe3-1a9a901bff57",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02102",
+      "nombre": "Mejillones",
+      "activo": true
+    },
+    {
+      "id": "8e7ec854-a30e-4e5a-837d-d6cea187500d",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02103",
+      "nombre": "Sierra Gorda",
+      "activo": true
+    },
+    {
+      "id": "bab2ff71-ba71-4b0c-99a6-3f1f4e4799e5",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02104",
+      "nombre": "Taltal",
+      "activo": true
+    },
+    {
+      "id": "7b183960-49f1-4d8b-9def-9f7c95c41f80",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02201",
+      "nombre": "Calama",
+      "activo": true
+    },
+    {
+      "id": "49ed711d-9509-4e33-a764-3697abda9581",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02202",
+      "nombre": "Ollagüe",
+      "activo": true
+    },
+    {
+      "id": "9e8facb1-ed9f-4232-84c3-2f5f099097dc",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02203",
+      "nombre": "San Pedro de Atacama",
+      "activo": true
+    },
+    {
+      "id": "6eb29868-b638-4992-8aee-60160fe9ff8e",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02301",
+      "nombre": "Tocopilla",
+      "activo": true
+    },
+    {
+      "id": "00ee4739-c856-4306-bd54-13cbc1bfbe13",
+      "pais_codigo": "CL",
+      "region_codigo": "02",
+      "codigo": "02302",
+      "nombre": "María Elena",
+      "activo": true
+    },
+    {
+      "id": "67e16c1f-c4d6-46ab-86ae-8f0875319658",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03101",
+      "nombre": "Copiapó",
+      "activo": true
+    },
+    {
+      "id": "29c25b6c-6839-4f17-b325-fe5b0a750693",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03102",
+      "nombre": "Caldera",
+      "activo": true
+    },
+    {
+      "id": "d407f70f-17d6-480f-add4-967db36cf487",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03103",
+      "nombre": "Tierra Amarilla",
+      "activo": true
+    },
+    {
+      "id": "44f3d26f-2451-468f-ae3a-2b1511128ef5",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03201",
+      "nombre": "Chañaral",
+      "activo": true
+    },
+    {
+      "id": "91d62f15-0a91-4b54-855b-2e1bbb894bd1",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03202",
+      "nombre": "Diego de Almagro",
+      "activo": true
+    },
+    {
+      "id": "cf1d5a07-b6cd-4aff-8645-92f7f3d8e533",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03301",
+      "nombre": "Vallenar",
+      "activo": true
+    },
+    {
+      "id": "c2c40d3b-5990-407b-b825-1ce6f86fda14",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03302",
+      "nombre": "Alto del Carmen",
+      "activo": true
+    },
+    {
+      "id": "5332fc1e-0a55-49cb-bed1-a4bed0ee8e34",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03303",
+      "nombre": "Freirina",
+      "activo": true
+    },
+    {
+      "id": "0acd9e81-e63b-444f-96e7-5d676a3bb75d",
+      "pais_codigo": "CL",
+      "region_codigo": "03",
+      "codigo": "03304",
+      "nombre": "Huasco",
+      "activo": true
+    },
+    {
+      "id": "608448cc-2f5b-4826-b16d-2cf79ee41dcd",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04101",
+      "nombre": "La Serena",
+      "activo": true
+    },
+    {
+      "id": "a6cd5eaa-dda2-42c1-a8ea-f5bc3e30b028",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04102",
+      "nombre": "Coquimbo",
+      "activo": true
+    },
+    {
+      "id": "0203bae4-b07d-443a-9144-6c9a3abfe1f5",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04103",
+      "nombre": "Andacollo",
+      "activo": true
+    },
+    {
+      "id": "47010098-2f54-4c0a-b693-2731a042df27",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04104",
+      "nombre": "La Higuera",
+      "activo": true
+    },
+    {
+      "id": "971da1f7-3947-4053-93ca-dfa084fc7cd5",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04105",
+      "nombre": "Paihuano",
+      "activo": true
+    },
+    {
+      "id": "64b3ebdf-d256-4458-b0fb-c6668dafa3c7",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04106",
+      "nombre": "Vicuña",
+      "activo": true
+    },
+    {
+      "id": "46730efc-19db-42f4-b1c2-a0622050f94f",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04201",
+      "nombre": "Illapel",
+      "activo": true
+    },
+    {
+      "id": "db3e4d64-df3f-4106-bab9-4f90415e5e59",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04202",
+      "nombre": "Canela",
+      "activo": true
+    },
+    {
+      "id": "85f3bcd0-089b-4712-995f-9380c4c72c8f",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04203",
+      "nombre": "Los Vilos",
+      "activo": true
+    },
+    {
+      "id": "1b2e5086-13a1-4f10-9958-6f3ec5ff3294",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04204",
+      "nombre": "Salamanca",
+      "activo": true
+    },
+    {
+      "id": "75cadf28-5625-42e7-b814-084420ab6254",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04301",
+      "nombre": "Ovalle",
+      "activo": true
+    },
+    {
+      "id": "f98f45c7-729e-4584-8637-d55f77aac014",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04302",
+      "nombre": "Combarbalá",
+      "activo": true
+    },
+    {
+      "id": "1e64cdf7-eaa4-4869-a6c8-b4d91f2d5010",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04303",
+      "nombre": "Monte Patria",
+      "activo": true
+    },
+    {
+      "id": "dd6f16d4-a46d-4ec3-9ee2-859b601987ae",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04304",
+      "nombre": "Punitaqui",
+      "activo": true
+    },
+    {
+      "id": "93be9d63-c42c-42b7-85e4-c5a12eae3f47",
+      "pais_codigo": "CL",
+      "region_codigo": "04",
+      "codigo": "04305",
+      "nombre": "Río Hurtado",
+      "activo": true
+    },
+    {
+      "id": "764e814e-d664-4d67-9caf-6c34c682d3ed",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05101",
+      "nombre": "Valparaíso",
+      "activo": true
+    },
+    {
+      "id": "a0c5bede-17f8-4e2b-931f-7ed1cf030f6e",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05102",
+      "nombre": "Casablanca",
+      "activo": true
+    },
+    {
+      "id": "f9ea24a3-a2b8-4469-91d3-ddf876342568",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05103",
+      "nombre": "Concón",
+      "activo": true
+    },
+    {
+      "id": "6cdcc7af-30ee-4b78-94eb-ccc6cfea34d1",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05104",
+      "nombre": "Juan Fernández",
+      "activo": true
+    },
+    {
+      "id": "9cf6e974-73ee-48a9-bfb9-c9a8317bfbb9",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05105",
+      "nombre": "Puchuncaví",
+      "activo": true
+    },
+    {
+      "id": "320bc9f6-98a2-4ef2-8397-73af39a456a7",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05107",
+      "nombre": "Quintero",
+      "activo": true
+    },
+    {
+      "id": "6c52202f-3417-470e-9a84-d17dbea5526d",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05109",
+      "nombre": "Viña del Mar",
+      "activo": true
+    },
+    {
+      "id": "753ad374-6a54-4e6c-abc9-87386bad8e51",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05201",
+      "nombre": "Isla de Pascua",
+      "activo": true
+    },
+    {
+      "id": "fd32ea37-a4a8-40f3-93e4-aec3d90c9347",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05301",
+      "nombre": "Los Andes",
+      "activo": true
+    },
+    {
+      "id": "d9428d34-445e-460f-ac1e-720e25043313",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05302",
+      "nombre": "Calle Larga",
+      "activo": true
+    },
+    {
+      "id": "ba630b8c-b389-43ef-a745-07ac6aa7a7e3",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05303",
+      "nombre": "Rinconada",
+      "activo": true
+    },
+    {
+      "id": "be6bc0bc-2992-4697-99cb-e678b85d0ceb",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05304",
+      "nombre": "San Esteban",
+      "activo": true
+    },
+    {
+      "id": "89230e98-47e0-4869-aece-5f56088a5cea",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05401",
+      "nombre": "La Ligua",
+      "activo": true
+    },
+    {
+      "id": "347a3a4e-e908-4b66-b43e-ba016b13ab7d",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05402",
+      "nombre": "Cabildo",
+      "activo": true
+    },
+    {
+      "id": "17f806bf-c639-4dcf-84a8-1999e156c4f7",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05403",
+      "nombre": "Papudo",
+      "activo": true
+    },
+    {
+      "id": "d4aab7d7-e644-4eee-99b7-90d1fc28a115",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05404",
+      "nombre": "Petorca",
+      "activo": true
+    },
+    {
+      "id": "75952e54-ee99-4f4c-898c-5d03d7c01699",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05405",
+      "nombre": "Zapallar",
+      "activo": true
+    },
+    {
+      "id": "95e0ab71-736d-4ee7-9089-da8bd8bf7733",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05501",
+      "nombre": "Quillota",
+      "activo": true
+    },
+    {
+      "id": "b7b7890d-9258-476a-bd52-c3753d2dfb8e",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05502",
+      "nombre": "Calera",
+      "activo": true
+    },
+    {
+      "id": "393ba5cc-da80-4f7c-ae5c-32fe46d43efd",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05503",
+      "nombre": "Hijuelas",
+      "activo": true
+    },
+    {
+      "id": "f43d144b-d1e3-4ede-87af-b1aa162d5792",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05504",
+      "nombre": "La Cruz",
+      "activo": true
+    },
+    {
+      "id": "afcf68fa-5bdf-4ff9-825d-44961d05eb31",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05506",
+      "nombre": "Nogales",
+      "activo": true
+    },
+    {
+      "id": "9bd3bcf3-88f3-4bea-98ed-c5bab7c9caf8",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05601",
+      "nombre": "San Antonio",
+      "activo": true
+    },
+    {
+      "id": "12eafc37-4d60-4626-b4cc-4c4e32c71e7a",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05602",
+      "nombre": "Algarrobo",
+      "activo": true
+    },
+    {
+      "id": "99420f2c-8908-47d8-b5bb-f74b71537de9",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05603",
+      "nombre": "Cartagena",
+      "activo": true
+    },
+    {
+      "id": "a6460350-3990-4525-8455-454ed2402fda",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05604",
+      "nombre": "El Quisco",
+      "activo": true
+    },
+    {
+      "id": "445a6bfe-ffec-4c41-9143-e979af54c144",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05605",
+      "nombre": "El Tabo",
+      "activo": true
+    },
+    {
+      "id": "5dad7b1b-8100-4f92-9fe9-75abeb66d22d",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05606",
+      "nombre": "Santo Domingo",
+      "activo": true
+    },
+    {
+      "id": "da72db1c-44f2-44af-93a3-93cf53520306",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05701",
+      "nombre": "San Felipe",
+      "activo": true
+    },
+    {
+      "id": "30be7a0b-4831-4cf2-99a7-ee3b35971277",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05702",
+      "nombre": "Catemu",
+      "activo": true
+    },
+    {
+      "id": "be33380c-6c4b-4a1c-87f6-fc83d9c66b72",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05703",
+      "nombre": "Llaillay",
+      "activo": true
+    },
+    {
+      "id": "68437ec2-470a-4533-91cc-8c73a0cc2e33",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05704",
+      "nombre": "Panquehue",
+      "activo": true
+    },
+    {
+      "id": "8abc4ada-ed92-4807-a1d6-9a44f88b649a",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05705",
+      "nombre": "Putaendo",
+      "activo": true
+    },
+    {
+      "id": "32d516a8-8f83-4cff-9e41-925caef2e5a0",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05706",
+      "nombre": "Santa María",
+      "activo": true
+    },
+    {
+      "id": "53224593-27f5-4e42-9213-472d943ba857",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05801",
+      "nombre": "Quilpué",
+      "activo": true
+    },
+    {
+      "id": "6bd64cc9-6e31-4ada-bb02-e9d54b65383a",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05802",
+      "nombre": "Limache",
+      "activo": true
+    },
+    {
+      "id": "3670777c-b5f4-4a5f-9585-356a4ba02a9c",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05803",
+      "nombre": "Olmué",
+      "activo": true
+    },
+    {
+      "id": "db85c617-d348-457e-a37a-c9d5f268d4b2",
+      "pais_codigo": "CL",
+      "region_codigo": "05",
+      "codigo": "05804",
+      "nombre": "Villa Alemana",
+      "activo": true
+    },
+    {
+      "id": "a2127c01-82b9-446b-9a17-9152581f1ead",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06101",
+      "nombre": "Rancagua",
+      "activo": true
+    },
+    {
+      "id": "1217d0e8-07da-4b06-9018-4fb515344970",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06102",
+      "nombre": "Codegua",
+      "activo": true
+    },
+    {
+      "id": "56cdeaf2-085e-4608-871f-f7e786a79556",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06103",
+      "nombre": "Coinco",
+      "activo": true
+    },
+    {
+      "id": "06d2438d-e543-48a1-995c-aa0e4a1b6843",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06104",
+      "nombre": "Coltauco",
+      "activo": true
+    },
+    {
+      "id": "eda761dc-f84a-44e3-bd0d-458a18fb6b66",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06105",
+      "nombre": "Doñihue",
+      "activo": true
+    },
+    {
+      "id": "b6f7931a-275c-4f9f-a058-46cebab21df8",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06106",
+      "nombre": "Graneros",
+      "activo": true
+    },
+    {
+      "id": "3d284e9a-c9eb-4b2c-b5fc-fa8737b18ec3",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06107",
+      "nombre": "Las Cabras",
+      "activo": true
+    },
+    {
+      "id": "b3c5dd88-4ac5-40a2-b9af-d5c4de6e7c0f",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06108",
+      "nombre": "Machalí",
+      "activo": true
+    },
+    {
+      "id": "91152dd5-cf31-4ce2-b05c-c8742f5a58d6",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06109",
+      "nombre": "Malloa",
+      "activo": true
+    },
+    {
+      "id": "041c865f-79fb-46ec-b64f-5d3e016bbf07",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06110",
+      "nombre": "Mostazal",
+      "activo": true
+    },
+    {
+      "id": "50c30956-5ab5-4598-967a-46a8b9e75da3",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06111",
+      "nombre": "Olivar",
+      "activo": true
+    },
+    {
+      "id": "e41be484-3211-4c8e-97b3-6f237fffb5e5",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06112",
+      "nombre": "Peumo",
+      "activo": true
+    },
+    {
+      "id": "b1cf7325-06da-40b7-abe4-370cdcdc9290",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06113",
+      "nombre": "Pichidegua",
+      "activo": true
+    },
+    {
+      "id": "6069f446-1e56-4af2-b5cf-0de77a10d5b3",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06114",
+      "nombre": "Quinta de Tilcoco",
+      "activo": true
+    },
+    {
+      "id": "c75ae49d-cd9a-4a13-86df-7486c24dbbc3",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06115",
+      "nombre": "Rengo",
+      "activo": true
+    },
+    {
+      "id": "7686dc13-4979-456e-a737-d3525a0756df",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06116",
+      "nombre": "Requínoa",
+      "activo": true
+    },
+    {
+      "id": "6d899402-9a9a-4857-94c6-49c2034fad89",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06117",
+      "nombre": "San Vicente",
+      "activo": true
+    },
+    {
+      "id": "4513acd8-cb79-42ee-a181-2b704304bd34",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06201",
+      "nombre": "Pichilemu",
+      "activo": true
+    },
+    {
+      "id": "27611251-6b00-45fb-95f1-5d52cb65ae8c",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06202",
+      "nombre": "La Estrella",
+      "activo": true
+    },
+    {
+      "id": "d865707a-0dde-4180-844b-550fbca9fe0a",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06203",
+      "nombre": "Litueche",
+      "activo": true
+    },
+    {
+      "id": "999add12-8f70-4623-b212-85471c8040b3",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06204",
+      "nombre": "Marchihue",
+      "activo": true
+    },
+    {
+      "id": "752aaa7a-fb04-4367-8231-125b06aaff54",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06205",
+      "nombre": "Navidad",
+      "activo": true
+    },
+    {
+      "id": "b71fa3cb-c41c-4459-84f8-e2caa477af69",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06206",
+      "nombre": "Paredones",
+      "activo": true
+    },
+    {
+      "id": "85c1f654-4889-4687-a2e3-f70215eee98c",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06301",
+      "nombre": "San Fernando",
+      "activo": true
+    },
+    {
+      "id": "65bc4bdd-b047-4036-92a3-ab83f283638a",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06302",
+      "nombre": "Chépica",
+      "activo": true
+    },
+    {
+      "id": "ebacf20a-4e9c-456f-a82a-3e96089e6bc0",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06303",
+      "nombre": "Chimbarongo",
+      "activo": true
+    },
+    {
+      "id": "96996b78-4ca8-4c6b-97a0-7a0be60977a4",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06304",
+      "nombre": "Lolol",
+      "activo": true
+    },
+    {
+      "id": "2f04427c-df73-4c6c-aa24-9ed208c4ed94",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06305",
+      "nombre": "Nancagua",
+      "activo": true
+    },
+    {
+      "id": "9562599b-56d5-4b00-af14-c6c5736daa59",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06306",
+      "nombre": "Palmilla",
+      "activo": true
+    },
+    {
+      "id": "0029b77b-c86b-445a-825d-44b41d212818",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06307",
+      "nombre": "Peralillo",
+      "activo": true
+    },
+    {
+      "id": "632338e6-091c-4974-8709-5336585ebfa6",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06308",
+      "nombre": "Placilla",
+      "activo": true
+    },
+    {
+      "id": "9a8f3abb-b676-4a18-a52c-134192b8d323",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06309",
+      "nombre": "Pumanque",
+      "activo": true
+    },
+    {
+      "id": "55aaf24c-04aa-4369-842a-498a39de2aac",
+      "pais_codigo": "CL",
+      "region_codigo": "06",
+      "codigo": "06310",
+      "nombre": "Santa Cruz",
+      "activo": true
+    },
+    {
+      "id": "9c4c4e05-f505-40e2-8193-4620d3d9ed0c",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07101",
+      "nombre": "Talca",
+      "activo": true
+    },
+    {
+      "id": "fa2ec320-01ad-4562-8b68-d46d0e2d84ab",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07102",
+      "nombre": "Constitución",
+      "activo": true
+    },
+    {
+      "id": "373cb014-deb9-4d84-98e1-555f47dea862",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07103",
+      "nombre": "Curepto",
+      "activo": true
+    },
+    {
+      "id": "03f48bcd-780b-4092-b1b1-7f985b365f6d",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07104",
+      "nombre": "Empedrado",
+      "activo": true
+    },
+    {
+      "id": "4614ca17-3fb7-4551-b6a5-1a8a3981b9ba",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07105",
+      "nombre": "Maule",
+      "activo": true
+    },
+    {
+      "id": "8da73f44-fc5c-49b0-87d3-bde99e727fea",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07106",
+      "nombre": "Pelarco",
+      "activo": true
+    },
+    {
+      "id": "d6d2b7d4-0621-4f8b-89c1-689a4adbcef2",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07107",
+      "nombre": "Pencahue",
+      "activo": true
+    },
+    {
+      "id": "55bb2af4-054f-4b32-a120-24a9552261be",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07108",
+      "nombre": "Río Claro",
+      "activo": true
+    },
+    {
+      "id": "e772d6a7-4a81-4663-b1f7-7bee5869a0f0",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07109",
+      "nombre": "San Clemente",
+      "activo": true
+    },
+    {
+      "id": "262664b0-035b-4108-9a28-02f381e652a4",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07110",
+      "nombre": "San Rafael",
+      "activo": true
+    },
+    {
+      "id": "e2b4a288-60ac-4e6f-90c0-1aaf2e4e7c23",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07201",
+      "nombre": "Cauquenes",
+      "activo": true
+    },
+    {
+      "id": "39f621a0-d41a-4f70-ab52-a9419dc638c6",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07202",
+      "nombre": "Chanco",
+      "activo": true
+    },
+    {
+      "id": "56797715-707d-4b16-b114-35577cd41f3e",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07203",
+      "nombre": "Pelluhue",
+      "activo": true
+    },
+    {
+      "id": "e24d6388-e66f-412a-93b1-6b19295e43ba",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07301",
+      "nombre": "Curicó",
+      "activo": true
+    },
+    {
+      "id": "b5f2b7a3-86ca-49e8-8b24-3049705400df",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07302",
+      "nombre": "Hualañé",
+      "activo": true
+    },
+    {
+      "id": "6853d39d-4f9d-425e-8b2b-b978034871ab",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07303",
+      "nombre": "Licantén",
+      "activo": true
+    },
+    {
+      "id": "f1dd74dc-e45a-479b-9d22-f4a9234ce8e2",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07304",
+      "nombre": "Molina",
+      "activo": true
+    },
+    {
+      "id": "0f6592ef-42c2-4f5d-9952-9eaba11ab4f6",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07305",
+      "nombre": "Rauco",
+      "activo": true
+    },
+    {
+      "id": "6c2318aa-b02b-46ef-9a84-40bc50f0631e",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07306",
+      "nombre": "Romeral",
+      "activo": true
+    },
+    {
+      "id": "ec4d7726-e29c-4a59-b30c-a2346561a5ca",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07307",
+      "nombre": "Sagrada Familia",
+      "activo": true
+    },
+    {
+      "id": "3bb93688-78ae-4d72-a8c0-df13b92e9eab",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07308",
+      "nombre": "Teno",
+      "activo": true
+    },
+    {
+      "id": "d6806b76-c792-4a48-9c17-8b459d78d190",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07309",
+      "nombre": "Vichuquén",
+      "activo": true
+    },
+    {
+      "id": "fe0f1f2f-0c2a-4c9f-b837-982455a47e70",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07401",
+      "nombre": "Linares",
+      "activo": true
+    },
+    {
+      "id": "392fb8ce-c40a-44fd-bc2a-10b1bd49e81a",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07402",
+      "nombre": "Colbún",
+      "activo": true
+    },
+    {
+      "id": "2cdbddc9-6631-49cc-a38b-370eeea35cef",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07403",
+      "nombre": "Longaví",
+      "activo": true
+    },
+    {
+      "id": "7ba86532-7745-4a81-a320-774810b04a90",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07404",
+      "nombre": "Parral",
+      "activo": true
+    },
+    {
+      "id": "09714a33-04d2-4cf8-8b8a-645c698bdebe",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07405",
+      "nombre": "Retiro",
+      "activo": true
+    },
+    {
+      "id": "c0ffa5cc-6db1-4f4a-ab6b-8c4fd334bd61",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07406",
+      "nombre": "San Javier",
+      "activo": true
+    },
+    {
+      "id": "a341bc4f-1dcf-4130-a78c-7a0d022c9f75",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07407",
+      "nombre": "Villa Alegre",
+      "activo": true
+    },
+    {
+      "id": "c56b80eb-e14b-4f6c-9a99-fe1f288067ed",
+      "pais_codigo": "CL",
+      "region_codigo": "07",
+      "codigo": "07408",
+      "nombre": "Yerbas Buenas",
+      "activo": true
+    },
+    {
+      "id": "adc60e61-3c4d-4d86-bfe2-77c7a483d010",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08101",
+      "nombre": "Concepción",
+      "activo": true
+    },
+    {
+      "id": "59f38c2e-2a7a-4c3a-91ff-c2ad1a0ae7f4",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08102",
+      "nombre": "Coronel",
+      "activo": true
+    },
+    {
+      "id": "21eb269a-2d77-4bbb-b804-edc94b821186",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08103",
+      "nombre": "Chiguayante",
+      "activo": true
+    },
+    {
+      "id": "24a3053d-4701-40d0-8a7a-f5b03257e567",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08104",
+      "nombre": "Florida",
+      "activo": true
+    },
+    {
+      "id": "6ab4da02-fde0-4b33-ab0a-e2adba7c7bbf",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08105",
+      "nombre": "Hualqui",
+      "activo": true
+    },
+    {
+      "id": "922b8b61-3bc9-47c9-b762-15c05a71e2b2",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08106",
+      "nombre": "Lota",
+      "activo": true
+    },
+    {
+      "id": "33f25a70-3586-46de-b1d6-ac6035124ec6",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08107",
+      "nombre": "Penco",
+      "activo": true
+    },
+    {
+      "id": "6a71ac04-0d53-49a9-879a-6b1c01d7a086",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08108",
+      "nombre": "San Pedro de la Paz",
+      "activo": true
+    },
+    {
+      "id": "f67ca9fe-f5db-4158-a7ce-99661f63469b",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08109",
+      "nombre": "Santa Juana",
+      "activo": true
+    },
+    {
+      "id": "43221bf5-53f4-4dcb-94cf-bc6149bf787c",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08110",
+      "nombre": "Talcahuano",
+      "activo": true
+    },
+    {
+      "id": "36f58a67-2c31-46a7-8975-fa015330b1bc",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08111",
+      "nombre": "Tomé",
+      "activo": true
+    },
+    {
+      "id": "97e01f2b-059b-4e00-ba3c-feff1f89eaff",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08112",
+      "nombre": "Hualpén",
+      "activo": true
+    },
+    {
+      "id": "b8d7de0d-80da-48ef-8e65-737651670b11",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08201",
+      "nombre": "Lebu",
+      "activo": true
+    },
+    {
+      "id": "24e43dd4-da1e-43fc-aa4a-99c74737e85e",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08202",
+      "nombre": "Arauco",
+      "activo": true
+    },
+    {
+      "id": "ba9aec60-9e6a-45b3-a0db-9e70c0b39faf",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08203",
+      "nombre": "Cañete",
+      "activo": true
+    },
+    {
+      "id": "d74995d4-c29d-4b9f-a177-ffea6981ada0",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08204",
+      "nombre": "Contulmo",
+      "activo": true
+    },
+    {
+      "id": "d5a3322c-09c5-4d1a-b10b-475728611907",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08205",
+      "nombre": "Curanilahue",
+      "activo": true
+    },
+    {
+      "id": "96cffe55-4ad0-47d8-a757-2ec34d3424ca",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08206",
+      "nombre": "Los Álamos",
+      "activo": true
+    },
+    {
+      "id": "14ed924c-d4a6-42ac-8a91-032dbbe1abc4",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08207",
+      "nombre": "Tirúa",
+      "activo": true
+    },
+    {
+      "id": "30e1d3a6-57b1-468c-b862-703ff387d036",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08301",
+      "nombre": "Los Ángeles",
+      "activo": true
+    },
+    {
+      "id": "ffb0a9cb-7057-4d33-a5f3-9a36dd91d03d",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08302",
+      "nombre": "Antuco",
+      "activo": true
+    },
+    {
+      "id": "3e9f356d-7758-4c3b-8118-69a8be10c091",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08303",
+      "nombre": "Cabrero",
+      "activo": true
+    },
+    {
+      "id": "6d4ac1fd-c351-49a9-901e-e0977d1b187a",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08304",
+      "nombre": "Laja",
+      "activo": true
+    },
+    {
+      "id": "2197aac1-df3b-473c-91cc-33ca44df5ef9",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08305",
+      "nombre": "Mulchén",
+      "activo": true
+    },
+    {
+      "id": "9ba59d86-50dd-40f6-8928-2db3ca583c1e",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08306",
+      "nombre": "Nacimiento",
+      "activo": true
+    },
+    {
+      "id": "dd92eb23-4db2-4787-83d3-7fa53ac9a806",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08307",
+      "nombre": "Negrete",
+      "activo": true
+    },
+    {
+      "id": "96a3fff6-aaf8-4061-b0f1-f3ff270bbd12",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08308",
+      "nombre": "Quilaco",
+      "activo": true
+    },
+    {
+      "id": "647cdecd-04cc-4835-be4e-c84169009ec9",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08309",
+      "nombre": "Quilleco",
+      "activo": true
+    },
+    {
+      "id": "bccca544-489d-4511-9301-4e695393fcd6",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08310",
+      "nombre": "San Rosendo",
+      "activo": true
+    },
+    {
+      "id": "b49cd2b6-9e0c-4683-a1f5-04283e832dfb",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08311",
+      "nombre": "Santa Bárbara",
+      "activo": true
+    },
+    {
+      "id": "b480b0b5-5bb2-4113-99ea-b9d8e0dc765c",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08312",
+      "nombre": "Tucapel",
+      "activo": true
+    },
+    {
+      "id": "85c36c76-7f01-4aa4-bb81-64e78bfbd54a",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08313",
+      "nombre": "Yumbel",
+      "activo": true
+    },
+    {
+      "id": "0fedd360-bd9b-4e72-bedb-4e2d43d2830f",
+      "pais_codigo": "CL",
+      "region_codigo": "08",
+      "codigo": "08314",
+      "nombre": "Alto Biobío",
+      "activo": true
+    },
+    {
+      "id": "e6b74532-6881-4fed-bfb2-d7a338537c1f",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09101",
+      "nombre": "Temuco",
+      "activo": true
+    },
+    {
+      "id": "82d6de3b-a6c7-40cc-aa69-1112ca5fd804",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09102",
+      "nombre": "Carahue",
+      "activo": true
+    },
+    {
+      "id": "ea97a0e0-8f48-4237-8ae7-e3ed9d0b7401",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09103",
+      "nombre": "Cunco",
+      "activo": true
+    },
+    {
+      "id": "f672ec04-2518-4fed-90c0-562ec1616c5e",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09104",
+      "nombre": "Curarrehue",
+      "activo": true
+    },
+    {
+      "id": "fc2261f3-5610-4101-9c73-8abfdc7c074c",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09105",
+      "nombre": "Freire",
+      "activo": true
+    },
+    {
+      "id": "1ca8b43a-ea0e-4df6-9d95-0e4bfca0e965",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09106",
+      "nombre": "Galvarino",
+      "activo": true
+    },
+    {
+      "id": "da5d1aef-f903-46c4-ae50-66f9cd2ccab1",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09107",
+      "nombre": "Gorbea",
+      "activo": true
+    },
+    {
+      "id": "437bf994-e8c9-45b0-82cf-9f1b9d53c49a",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09108",
+      "nombre": "Lautaro",
+      "activo": true
+    },
+    {
+      "id": "a6567e02-2ad2-4377-8582-1186c909a1b3",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09109",
+      "nombre": "Loncoche",
+      "activo": true
+    },
+    {
+      "id": "e196996e-e16a-47c3-a700-a31ae7227ea6",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09110",
+      "nombre": "Melipeuco",
+      "activo": true
+    },
+    {
+      "id": "21815a08-080b-4992-bdfe-ea65ab25040f",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09111",
+      "nombre": "Nueva Imperial",
+      "activo": true
+    },
+    {
+      "id": "71f8186e-cf12-47be-be66-2d2c95cb62a6",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09112",
+      "nombre": "Padre Las Casas",
+      "activo": true
+    },
+    {
+      "id": "503dd730-392a-4a42-93be-535e5300dced",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09113",
+      "nombre": "Perquenco",
+      "activo": true
+    },
+    {
+      "id": "49c5a2df-dfbf-44e2-9bd4-930d9dfb0d3b",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09114",
+      "nombre": "Pitrufquén",
+      "activo": true
+    },
+    {
+      "id": "101d0f0f-0fce-4e8b-86c5-a66b4a4e4788",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09115",
+      "nombre": "Pucón",
+      "activo": true
+    },
+    {
+      "id": "41a93304-dd3a-4d04-b224-e4c3a6e23d5b",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09116",
+      "nombre": "Saavedra",
+      "activo": true
+    },
+    {
+      "id": "fd74fff0-e4dd-4635-b07d-8bafc59c45ee",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09117",
+      "nombre": "Teodoro Schmidt",
+      "activo": true
+    },
+    {
+      "id": "1b5de8af-e0eb-4b54-943b-e47bb95a129b",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09118",
+      "nombre": "Toltén",
+      "activo": true
+    },
+    {
+      "id": "831c42b2-281b-4f7a-81be-4438ef67abb5",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09119",
+      "nombre": "Vilcún",
+      "activo": true
+    },
+    {
+      "id": "4796b03a-3aef-4fe8-8699-023895a9a335",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09120",
+      "nombre": "Villarrica",
+      "activo": true
+    },
+    {
+      "id": "507330fc-622b-4de5-a96d-82cceb445312",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09121",
+      "nombre": "Cholchol",
+      "activo": true
+    },
+    {
+      "id": "4c9b44a2-0f6b-4105-b21a-96292d5b13e5",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09201",
+      "nombre": "Angol",
+      "activo": true
+    },
+    {
+      "id": "f4df1e20-7c4b-4ace-82fb-b045983e6e8d",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09202",
+      "nombre": "Collipulli",
+      "activo": true
+    },
+    {
+      "id": "1edc0fe9-9efa-4368-8fdd-ff99b4eef3ad",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09203",
+      "nombre": "Curacautín",
+      "activo": true
+    },
+    {
+      "id": "a3d7ba46-50bf-4669-9244-5b37d6cc9c20",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09204",
+      "nombre": "Ercilla",
+      "activo": true
+    },
+    {
+      "id": "e36fef7c-8067-4370-8952-0e6d1b435b6a",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09205",
+      "nombre": "Lonquimay",
+      "activo": true
+    },
+    {
+      "id": "e9d56c36-9ae9-403d-9d68-1c94d0be40ce",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09206",
+      "nombre": "Los Sauces",
+      "activo": true
+    },
+    {
+      "id": "4ff95f84-6d99-4dcb-8077-c1e639899c6f",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09207",
+      "nombre": "Lumaco",
+      "activo": true
+    },
+    {
+      "id": "683dede6-6aa2-40a6-9623-2ec09eb6cb2c",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09208",
+      "nombre": "Purén",
+      "activo": true
+    },
+    {
+      "id": "d8a1de86-8115-44d5-af91-5c068c260fa4",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09209",
+      "nombre": "Renaico",
+      "activo": true
+    },
+    {
+      "id": "cd20b396-eae2-4145-a0da-c51bfbbc5b77",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09210",
+      "nombre": "Traiguén",
+      "activo": true
+    },
+    {
+      "id": "12e2d04e-af74-45fe-ac61-c87d07a15c93",
+      "pais_codigo": "CL",
+      "region_codigo": "09",
+      "codigo": "09211",
+      "nombre": "Victoria",
+      "activo": true
+    },
+    {
+      "id": "01886692-dc0e-478c-b827-dc35867884ff",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10101",
+      "nombre": "Puerto Montt",
+      "activo": true
+    },
+    {
+      "id": "57bf33fd-5163-4989-a478-e13e90c9be5e",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10102",
+      "nombre": "Calbuco",
+      "activo": true
+    },
+    {
+      "id": "e7cba299-47f2-4f92-ac01-98cea234915c",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10103",
+      "nombre": "Cochamó",
+      "activo": true
+    },
+    {
+      "id": "dd7c3797-72dc-4024-9707-809ee8a11b8e",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10104",
+      "nombre": "Fresia",
+      "activo": true
+    },
+    {
+      "id": "9247fb2e-816d-41b0-a2ee-5cae65f962df",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10105",
+      "nombre": "Frutillar",
+      "activo": true
+    },
+    {
+      "id": "314b58c9-1184-4ad2-a6f3-a4c7b2975c44",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10106",
+      "nombre": "Los Muermos",
+      "activo": true
+    },
+    {
+      "id": "6bc0481a-93ee-4fa5-8b1e-2574c471c2fd",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10107",
+      "nombre": "Llanquihue",
+      "activo": true
+    },
+    {
+      "id": "da0089c1-c3f5-4b09-95a3-ec0531a037bf",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10108",
+      "nombre": "Maullín",
+      "activo": true
+    },
+    {
+      "id": "4fedca23-3bf8-4ba6-938a-6e15facd50d3",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10109",
+      "nombre": "Puerto Varas",
+      "activo": true
+    },
+    {
+      "id": "66657a0f-39d4-4389-8504-486a3e45c6af",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10201",
+      "nombre": "Castro",
+      "activo": true
+    },
+    {
+      "id": "640fcbb4-6cd7-4ac8-83e3-484ca0368037",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10202",
+      "nombre": "Ancud",
+      "activo": true
+    },
+    {
+      "id": "32928c00-12dd-48c4-8952-afad3f2ad72d",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10203",
+      "nombre": "Chonchi",
+      "activo": true
+    },
+    {
+      "id": "68045966-3c7b-4aa5-8d8a-c79929daa3c8",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10204",
+      "nombre": "Curaco de Vélez",
+      "activo": true
+    },
+    {
+      "id": "c8229544-e9a1-4c3f-9698-7761f6ef19fd",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10205",
+      "nombre": "Dalcahue",
+      "activo": true
+    },
+    {
+      "id": "2a0dc576-a0d5-4881-8d60-00e4cd34dc7a",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10206",
+      "nombre": "Puqueldón",
+      "activo": true
+    },
+    {
+      "id": "c1340ba7-2700-4e1b-99a4-e2d9b02d43eb",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10207",
+      "nombre": "Queilén",
+      "activo": true
+    },
+    {
+      "id": "3545b69f-9fde-430c-95f3-7751ad7ff58c",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10208",
+      "nombre": "Quellón",
+      "activo": true
+    },
+    {
+      "id": "f0a9d619-8b82-4275-b912-617e89b984b5",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10209",
+      "nombre": "Quemchi",
+      "activo": true
+    },
+    {
+      "id": "69d22598-3048-4042-9239-80cd3f9faa33",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10210",
+      "nombre": "Quinchao",
+      "activo": true
+    },
+    {
+      "id": "03628622-d121-4d13-8d49-388355e5cc8f",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10301",
+      "nombre": "Osorno",
+      "activo": true
+    },
+    {
+      "id": "ee0f2022-98f3-4e07-8ac9-67e9da57a9b3",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10302",
+      "nombre": "Puerto Octay",
+      "activo": true
+    },
+    {
+      "id": "08e10a3f-a048-4c41-99ae-1a6a948451c9",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10303",
+      "nombre": "Purranque",
+      "activo": true
+    },
+    {
+      "id": "a5be2e19-3fde-4a82-a3a5-5913f1729e74",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10304",
+      "nombre": "Puyehue",
+      "activo": true
+    },
+    {
+      "id": "f994d767-388f-428d-8e42-5a46d92b1dfa",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10305",
+      "nombre": "Río Negro",
+      "activo": true
+    },
+    {
+      "id": "168e43f3-492f-4d1e-bfe2-fb42e346c1da",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10306",
+      "nombre": "San Juan de la Costa",
+      "activo": true
+    },
+    {
+      "id": "0e7b71d5-dec4-4cf4-9d41-41c8c43c7633",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10307",
+      "nombre": "San Pablo",
+      "activo": true
+    },
+    {
+      "id": "a4140050-e042-4641-8a0e-2515e5cf213c",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10401",
+      "nombre": "Chaitén",
+      "activo": true
+    },
+    {
+      "id": "95a041a6-4670-4dc0-b6ff-6551fe63e96b",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10402",
+      "nombre": "Futaleufú",
+      "activo": true
+    },
+    {
+      "id": "19f1daab-dec5-47a9-9836-d166da9af53a",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10403",
+      "nombre": "Hualaihué",
+      "activo": true
+    },
+    {
+      "id": "7097d810-e5c3-4505-b7d6-a2e614b1374a",
+      "pais_codigo": "CL",
+      "region_codigo": "10",
+      "codigo": "10404",
+      "nombre": "Palena",
+      "activo": true
+    },
+    {
+      "id": "2edac672-2d79-4456-9463-30b02e5774b7",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11101",
+      "nombre": "Coyhaique",
+      "activo": true
+    },
+    {
+      "id": "9a606018-c7fc-416c-a45c-9dee8ee1b6ae",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11102",
+      "nombre": "Lago Verde",
+      "activo": true
+    },
+    {
+      "id": "1878af96-e830-4654-a429-29b7ad4cb97e",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11201",
+      "nombre": "Aysén",
+      "activo": true
+    },
+    {
+      "id": "f48fb878-d4c3-4256-a6ed-a266b61639d1",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11202",
+      "nombre": "Cisnes",
+      "activo": true
+    },
+    {
+      "id": "dc7453c5-475f-4cb3-8385-c9db0a5c189b",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11203",
+      "nombre": "Guaitecas",
+      "activo": true
+    },
+    {
+      "id": "8b937d42-5f29-4c27-927f-b814de58e52d",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11301",
+      "nombre": "Cochrane",
+      "activo": true
+    },
+    {
+      "id": "58dd77ca-3a21-4aea-b697-e21befedc881",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11302",
+      "nombre": "O'Higgins",
+      "activo": true
+    },
+    {
+      "id": "fbcdffc9-151c-4cef-bc9f-de9202b59cb5",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11303",
+      "nombre": "Tortel",
+      "activo": true
+    },
+    {
+      "id": "8a9dab4d-7d7f-48c6-a58d-e75762ffd072",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11401",
+      "nombre": "Chile Chico",
+      "activo": true
+    },
+    {
+      "id": "63d41990-e738-425b-873b-9a988063f4b7",
+      "pais_codigo": "CL",
+      "region_codigo": "11",
+      "codigo": "11402",
+      "nombre": "Río Ibáñez",
+      "activo": true
+    },
+    {
+      "id": "afa472da-a7c8-4826-ad21-071c39897f72",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12101",
+      "nombre": "Punta Arenas",
+      "activo": true
+    },
+    {
+      "id": "b9ead20e-41f6-46ef-ad14-3fa5fb429c9e",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12102",
+      "nombre": "Laguna Blanca",
+      "activo": true
+    },
+    {
+      "id": "05039eb3-a2d1-4fc4-8739-83f4368a4a2b",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12103",
+      "nombre": "Río Verde",
+      "activo": true
+    },
+    {
+      "id": "6e886c23-5b03-4e11-9451-57d49c94bd0c",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12104",
+      "nombre": "San Gregorio",
+      "activo": true
+    },
+    {
+      "id": "5993b8af-f068-4c54-9deb-f81a7e8aa76b",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12201",
+      "nombre": "Cabo de Hornos",
+      "activo": true
+    },
+    {
+      "id": "273664ad-bb0e-4509-b73a-e7ff7c68691d",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12202",
+      "nombre": "Antártica",
+      "activo": true
+    },
+    {
+      "id": "27c8aac9-b7fd-4451-83e8-ca1a5066ce0b",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12301",
+      "nombre": "Porvenir",
+      "activo": true
+    },
+    {
+      "id": "750782c2-a0b6-49c9-9aa1-0ffe528101c0",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12302",
+      "nombre": "Primavera",
+      "activo": true
+    },
+    {
+      "id": "ed2e009d-aef3-49c3-ab0a-a06e8d9cee36",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12303",
+      "nombre": "Timaukel",
+      "activo": true
+    },
+    {
+      "id": "9ff1001f-3dfa-4400-9150-0fe11a00a48b",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12401",
+      "nombre": "Natales",
+      "activo": true
+    },
+    {
+      "id": "6f2071f5-5626-4500-94df-77802d9bf275",
+      "pais_codigo": "CL",
+      "region_codigo": "12",
+      "codigo": "12402",
+      "nombre": "Torres del Paine",
+      "activo": true
+    },
+    {
+      "id": "01f896a4-89b5-4728-a5b1-9976e55a7a1e",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13101",
+      "nombre": "Santiago",
+      "activo": true
+    },
+    {
+      "id": "72983b57-9bfc-42ce-937f-42d00c288c2c",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13102",
+      "nombre": "Cerrillos",
+      "activo": true
+    },
+    {
+      "id": "42dc996f-f523-45bd-b376-2318d58053d2",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13103",
+      "nombre": "Cerro Navia",
+      "activo": true
+    },
+    {
+      "id": "8492c300-54c1-40f6-9515-67319811c04b",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13104",
+      "nombre": "Conchalí",
+      "activo": true
+    },
+    {
+      "id": "5870dfcc-eff4-45c6-88a1-22b959959a24",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13105",
+      "nombre": "El Bosque",
+      "activo": true
+    },
+    {
+      "id": "d372890e-4393-49b7-a46d-7a8b8ebf4599",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13106",
+      "nombre": "Estación Central",
+      "activo": true
+    },
+    {
+      "id": "5b50018f-cb36-4ace-925d-7cf8be4c64c3",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13107",
+      "nombre": "Huechuraba",
+      "activo": true
+    },
+    {
+      "id": "989a7d8f-5903-4829-b685-b3ed080e2ac8",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13108",
+      "nombre": "Independencia",
+      "activo": true
+    },
+    {
+      "id": "6b6c9ac5-8bd3-4cb2-b5dd-ec02bc094d35",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13109",
+      "nombre": "La Cisterna",
+      "activo": true
+    },
+    {
+      "id": "d31417fc-c361-40a6-8747-def3e82bb38f",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13110",
+      "nombre": "La Florida",
+      "activo": true
+    },
+    {
+      "id": "34173113-db29-4769-bb10-84fe8d4dffe1",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13111",
+      "nombre": "La Granja",
+      "activo": true
+    },
+    {
+      "id": "9ae7344e-bee3-44c3-8160-b01b8b48f28f",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13112",
+      "nombre": "La Pintana",
+      "activo": true
+    },
+    {
+      "id": "89c43e8c-cbb1-4e78-8309-42d279f1f824",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13113",
+      "nombre": "La Reina",
+      "activo": true
+    },
+    {
+      "id": "e94bdcdb-514a-4c94-912d-2441ed4b4462",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13114",
+      "nombre": "Las Condes",
+      "activo": true
+    },
+    {
+      "id": "65899c09-790a-4af7-af21-f6a38d02ae0b",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13115",
+      "nombre": "Lo Barnechea",
+      "activo": true
+    },
+    {
+      "id": "58968fcd-4457-4ec3-bf7e-a96f5376e00d",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13116",
+      "nombre": "Lo Espejo",
+      "activo": true
+    },
+    {
+      "id": "c0964103-4426-4162-9e84-fc86b2426d23",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13117",
+      "nombre": "Lo Prado",
+      "activo": true
+    },
+    {
+      "id": "17754f96-8f89-44db-99e0-339cb8f9340f",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13118",
+      "nombre": "Macul",
+      "activo": true
+    },
+    {
+      "id": "c7f502ab-53cc-4993-b066-19d7ed64a09c",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13119",
+      "nombre": "Maipú",
+      "activo": true
+    },
+    {
+      "id": "e7efa64f-c87e-439b-8045-3382625b604f",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13120",
+      "nombre": "Ñuñoa",
+      "activo": true
+    },
+    {
+      "id": "8182bb99-3a13-4fcd-a3c6-5478a73c9060",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13121",
+      "nombre": "Pedro Aguirre Cerda",
+      "activo": true
+    },
+    {
+      "id": "3e40ab67-f886-4d5d-bb0f-e6297e52dbbe",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13122",
+      "nombre": "Peñalolén",
+      "activo": true
+    },
+    {
+      "id": "07750efe-50d2-463f-aba1-2911b33d1698",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13123",
+      "nombre": "Providencia",
+      "activo": true
+    },
+    {
+      "id": "b6c3ccd7-0792-49a0-ae35-4b6820ce8e99",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13124",
+      "nombre": "Pudahuel",
+      "activo": true
+    },
+    {
+      "id": "804a76c5-7993-4769-9666-2a04311761a7",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13125",
+      "nombre": "Quilicura",
+      "activo": true
+    },
+    {
+      "id": "179c9f81-f02e-4926-9ba7-166577395d52",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13126",
+      "nombre": "Quinta Normal",
+      "activo": true
+    },
+    {
+      "id": "ea63cde1-a7e5-4197-81da-8dfa2bc5ba5b",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13127",
+      "nombre": "Recoleta",
+      "activo": true
+    },
+    {
+      "id": "7f463192-ad27-4120-b644-08f7a4c76660",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13128",
+      "nombre": "Renca",
+      "activo": true
+    },
+    {
+      "id": "27a4a9c5-16a1-4e36-be44-636bad9a53f3",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13129",
+      "nombre": "San Joaquín",
+      "activo": true
+    },
+    {
+      "id": "a9f0e26c-1dc5-4511-a664-5b5e1d2d4f26",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13130",
+      "nombre": "San Miguel",
+      "activo": true
+    },
+    {
+      "id": "239b7674-88b9-4243-a25a-f7fcab54a1ad",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13131",
+      "nombre": "San Ramón",
+      "activo": true
+    },
+    {
+      "id": "e6b04d2d-c221-4a3b-aecd-680707eddcd1",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13132",
+      "nombre": "Vitacura",
+      "activo": true
+    },
+    {
+      "id": "13b98bee-6336-43c4-8230-c90775040d58",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13201",
+      "nombre": "Puente Alto",
+      "activo": true
+    },
+    {
+      "id": "5450d5ff-2d25-447a-82c0-343932ebefe3",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13202",
+      "nombre": "Pirque",
+      "activo": true
+    },
+    {
+      "id": "539cf3b5-2e41-4b03-9495-dd6d3ec00ab0",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13203",
+      "nombre": "San José de Maipo",
+      "activo": true
+    },
+    {
+      "id": "b75d30a2-da10-4b41-8824-85bb5612340b",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13301",
+      "nombre": "Colina",
+      "activo": true
+    },
+    {
+      "id": "a3b05467-5fb1-41b8-92f8-34b509e72842",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13302",
+      "nombre": "Lampa",
+      "activo": true
+    },
+    {
+      "id": "aa1f70e8-d67a-44e0-93da-b2576f1a5daa",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13303",
+      "nombre": "Tiltil",
+      "activo": true
+    },
+    {
+      "id": "103cade5-bf81-49d3-9305-3332af548b90",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13401",
+      "nombre": "San Bernardo",
+      "activo": true
+    },
+    {
+      "id": "a152f1a2-cfa7-4f73-ae85-0d83bbc8fa39",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13402",
+      "nombre": "Buin",
+      "activo": true
+    },
+    {
+      "id": "8d13d903-1765-4f6c-8d45-058b8c91b456",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13403",
+      "nombre": "Calera de Tango",
+      "activo": true
+    },
+    {
+      "id": "3457bac8-e5cf-4c1d-a5b7-2c80e6e0cc72",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13404",
+      "nombre": "Paine",
+      "activo": true
+    },
+    {
+      "id": "2da01247-9900-473f-ad40-5f67f2bbff88",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13501",
+      "nombre": "Melipilla",
+      "activo": true
+    },
+    {
+      "id": "704323c5-89f0-4a3f-85e8-a72a010cf193",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13502",
+      "nombre": "Alhué",
+      "activo": true
+    },
+    {
+      "id": "19c10f17-7cd0-4d9d-b76d-7316c7cc53cb",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13503",
+      "nombre": "Curacaví",
+      "activo": true
+    },
+    {
+      "id": "39132dbb-c616-4b4b-9109-511491981ff7",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13504",
+      "nombre": "María Pinto",
+      "activo": true
+    },
+    {
+      "id": "9f50d898-62ec-48f6-a721-34df649bb8cc",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13505",
+      "nombre": "San Pedro",
+      "activo": true
+    },
+    {
+      "id": "48ca137c-b53e-44f4-ac29-10eb8938a649",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13601",
+      "nombre": "Talagante",
+      "activo": true
+    },
+    {
+      "id": "0a3c50f1-dad1-407e-9e16-40e48f6e1df1",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13602",
+      "nombre": "El Monte",
+      "activo": true
+    },
+    {
+      "id": "7a0e7929-f3ea-4533-9e57-66e45c6f1b11",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13603",
+      "nombre": "Isla de Maipo",
+      "activo": true
+    },
+    {
+      "id": "12c25cec-d7d5-4c4b-9897-e5a7c83ab3bb",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13604",
+      "nombre": "Padre Hurtado",
+      "activo": true
+    },
+    {
+      "id": "dc37012e-acb6-4f06-9522-2004eb55f6f8",
+      "pais_codigo": "CL",
+      "region_codigo": "13",
+      "codigo": "13605",
+      "nombre": "Peñaflor",
+      "activo": true
+    },
+    {
+      "id": "c973743f-8698-4605-9133-4910427da506",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14101",
+      "nombre": "Valdivia",
+      "activo": true
+    },
+    {
+      "id": "0ee73283-2cf6-4a3a-ae36-fa7841b7e5ad",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14102",
+      "nombre": "Corral",
+      "activo": true
+    },
+    {
+      "id": "7e7629db-9be0-47b6-b2b8-74e38a9bdcda",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14103",
+      "nombre": "Lanco",
+      "activo": true
+    },
+    {
+      "id": "036f8900-0263-4bad-8b2e-860545ba9949",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14104",
+      "nombre": "Los Lagos",
+      "activo": true
+    },
+    {
+      "id": "54d50807-21cf-49e6-ba02-ed4b6efcb5ba",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14105",
+      "nombre": "Máfil",
+      "activo": true
+    },
+    {
+      "id": "e4078b4c-10a1-4488-a968-bd2db0310d77",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14106",
+      "nombre": "Mariquina",
+      "activo": true
+    },
+    {
+      "id": "3ecf4fe0-b8bb-4118-a486-0bf01edba416",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14107",
+      "nombre": "Paillaco",
+      "activo": true
+    },
+    {
+      "id": "5140842b-df97-47ba-8dc7-50423d323e07",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14108",
+      "nombre": "Panguipulli",
+      "activo": true
+    },
+    {
+      "id": "04687ee6-876e-4aa1-a038-5424d13967fc",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14201",
+      "nombre": "La Unión",
+      "activo": true
+    },
+    {
+      "id": "3f91d387-5a7d-4fa6-af4a-7a5123262f78",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14202",
+      "nombre": "Futrono",
+      "activo": true
+    },
+    {
+      "id": "b68da497-32d8-4ab0-aebb-bce5ca31e6c7",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14203",
+      "nombre": "Lago Ranco",
+      "activo": true
+    },
+    {
+      "id": "01a6b09f-620e-43f0-aa41-cec1f4cf81a1",
+      "pais_codigo": "CL",
+      "region_codigo": "14",
+      "codigo": "14204",
+      "nombre": "Río Bueno",
+      "activo": true
+    },
+    {
+      "id": "c67e862e-8d5c-461e-b06b-b54f1d8cb809",
+      "pais_codigo": "CL",
+      "region_codigo": "15",
+      "codigo": "15101",
+      "nombre": "Arica",
+      "activo": true
+    },
+    {
+      "id": "d6acf36d-0946-4665-a297-b978faf44e72",
+      "pais_codigo": "CL",
+      "region_codigo": "15",
+      "codigo": "15102",
+      "nombre": "Camarones",
+      "activo": true
+    },
+    {
+      "id": "04f3de55-5faf-4e52-a940-c82e0e7edbbd",
+      "pais_codigo": "CL",
+      "region_codigo": "15",
+      "codigo": "15201",
+      "nombre": "Putre",
+      "activo": true
+    },
+    {
+      "id": "7866f808-004b-4d11-9014-b395972c6dfa",
+      "pais_codigo": "CL",
+      "region_codigo": "15",
+      "codigo": "15202",
+      "nombre": "General Lagos",
+      "activo": true
+    },
+    {
+      "id": "2a1281ad-e899-4961-acc2-c5c6aabe6d84",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16101",
+      "nombre": "Chillán",
+      "activo": true
+    },
+    {
+      "id": "ba335b72-082c-4388-b4c6-e2a348c71d89",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16102",
+      "nombre": "Bulnes",
+      "activo": true
+    },
+    {
+      "id": "a607c1d9-d03a-4477-85cf-50dc0ce63465",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16103",
+      "nombre": "Chillán Viejo",
+      "activo": true
+    },
+    {
+      "id": "8ee0e02c-7421-4d37-808d-1e76c7ec3153",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16104",
+      "nombre": "El Carmen",
+      "activo": true
+    },
+    {
+      "id": "66ea4240-7453-4273-b57f-b6a46be0e7e1",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16105",
+      "nombre": "Pemuco",
+      "activo": true
+    },
+    {
+      "id": "15065501-ca39-40ce-9670-951a06ff5322",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16106",
+      "nombre": "Pinto",
+      "activo": true
+    },
+    {
+      "id": "8e07415a-089a-40f1-a21b-6f4a1a3414fb",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16107",
+      "nombre": "Quillón",
+      "activo": true
+    },
+    {
+      "id": "baef2e2b-e7f7-42fc-b889-724ec81941e7",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16108",
+      "nombre": "San Ignacio",
+      "activo": true
+    },
+    {
+      "id": "0ee79c3b-8ed1-4a50-8909-df89f3593f70",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16109",
+      "nombre": "Yungay",
+      "activo": true
+    },
+    {
+      "id": "f5729c0a-3f2e-4743-ae5a-4915c0748f17",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16201",
+      "nombre": "Quirihue",
+      "activo": true
+    },
+    {
+      "id": "8b6f62c4-e3a9-49f0-86c5-2cd691c9618b",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16202",
+      "nombre": "Cobquecura",
+      "activo": true
+    },
+    {
+      "id": "f6f3ffbb-fce5-42f3-8896-21d7a9aae55e",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16203",
+      "nombre": "Coelemu",
+      "activo": true
+    },
+    {
+      "id": "18c2f9cb-3218-43cc-8d6f-3fa6a3c2bc66",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16204",
+      "nombre": "Ninhue",
+      "activo": true
+    },
+    {
+      "id": "bdcbe6be-2d76-4385-a99b-3ecb3ad6f6a4",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16205",
+      "nombre": "Portezuelo",
+      "activo": true
+    },
+    {
+      "id": "dd49c90f-bf6b-4ddc-844b-3f48e32b70c9",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16206",
+      "nombre": "Ránquil",
+      "activo": true
+    },
+    {
+      "id": "5e1eafce-6c7b-40a8-996a-07c3dbb3338e",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16207",
+      "nombre": "Treguaco",
+      "activo": true
+    },
+    {
+      "id": "f137a49b-c90e-4ebe-99b2-1e32d5f6fc7c",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16301",
+      "nombre": "San Carlos",
+      "activo": true
+    },
+    {
+      "id": "026e7e4b-79ef-4f2a-8be6-8d491d6b5f2a",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16302",
+      "nombre": "Coihueco",
+      "activo": true
+    },
+    {
+      "id": "5ec3ee77-4cd7-4510-89a4-5c4a5d3415c7",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16303",
+      "nombre": "Ñiquén",
+      "activo": true
+    },
+    {
+      "id": "b77050d1-8ef5-40ce-a0c8-dc8ba0240bce",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16304",
+      "nombre": "San Fabián",
+      "activo": true
+    },
+    {
+      "id": "ae46c0a8-4658-4dcf-89be-64e335c27b59",
+      "pais_codigo": "CL",
+      "region_codigo": "16",
+      "codigo": "16305",
+      "nombre": "San Nicolás",
+      "activo": true
+    }
+  ],
+  "actividades": [
+    {
+      "id": "ffb51b42-5ced-4299-87c5-e1647ead7479",
+      "codigo": "atletismo",
+      "nombre": "Atletismo",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "c989bebb-87f8-4772-8f6e-383416bd1618",
+      "codigo": "badminton",
+      "nombre": "Bádminton",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "fe479d22-647a-46db-a1dc-095728f544d1",
+      "codigo": "baile_fitness",
+      "nombre": "Baile fitness",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "6195ac2b-8085-45b2-ac86-87d39d7ecd34",
+      "codigo": "balonmano",
+      "nombre": "Balonmano",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "1b7a4190-abaf-41d1-b7a0-bc992670f5ca",
+      "codigo": "basquetbol",
+      "nombre": "Básquetbol",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "b3dc3eec-6935-4920-ad7f-a3e678c03bc2",
+      "codigo": "beisbol",
+      "nombre": "Béisbol",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "e0c5e02d-bb0a-4d47-8864-a7b550abc413",
+      "codigo": "bodyboard",
+      "nombre": "Bodyboard",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "3c5d4e2c-dc0c-44b0-8366-90676d2f2262",
+      "codigo": "boxeo",
+      "nombre": "Boxeo",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "a8732430-bb2b-4bec-ad9c-45380c86b386",
+      "codigo": "calistenia",
+      "nombre": "Calistenia",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "21de2b17-f650-4ad0-a45a-30358bc5b5de",
+      "codigo": "caminata",
+      "nombre": "Caminata",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "ca62bb88-5cd7-4c6c-ba71-05ddd461d54c",
+      "codigo": "ciclismo",
+      "nombre": "Ciclismo",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "ac22c071-f77b-4a93-b454-4178e3439b17",
+      "codigo": "entrenamiento_funcional",
+      "nombre": "Entrenamiento funcional",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "d107e191-87cd-4b45-848c-bfd21ca17c5d",
+      "codigo": "escalada",
+      "nombre": "Escalada",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "69359165-62f2-4eb6-abd9-5f0f7da1801a",
+      "codigo": "esqui",
+      "nombre": "Esquí",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "8cbdb448-f15e-4fed-9786-fcc6f18b21d2",
+      "codigo": "futbol",
+      "nombre": "Fútbol",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "c8e88dc9-576d-4e91-9b2d-5e0468bd45e4",
+      "codigo": "futsal",
+      "nombre": "Futsal",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "6173a418-5c77-400d-80d0-9bc9a91b07e8",
+      "codigo": "hockey_cesped",
+      "nombre": "Hockey sobre césped",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "e0550895-c721-4aa3-ad2e-bc40e90e9f96",
+      "codigo": "karate",
+      "nombre": "Karate",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "d9be8079-25cc-448c-b95f-ae1130ee6033",
+      "codigo": "kayak",
+      "nombre": "Kayak",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "970a45b4-c53b-4783-987b-3ac76457b558",
+      "codigo": "musculacion",
+      "nombre": "Musculación",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "022f4d9d-34a0-4ab8-87f9-a5459515fb50",
+      "codigo": "natacion",
+      "nombre": "Natación",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "fece1fa2-a055-4a5f-97b7-80b9e3e2ae17",
+      "codigo": "padel",
+      "nombre": "Pádel",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "f19d58eb-551d-450b-b3f0-7f3f1b738bcf",
+      "codigo": "patinaje",
+      "nombre": "Patinaje",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "c124be6b-2bde-45ae-9bf8-4825969ff97a",
+      "codigo": "pickleball",
+      "nombre": "Pickleball",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "13726b58-83fe-4269-bb9f-a7a39bb9a8cc",
+      "codigo": "pilates",
+      "nombre": "Pilates",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "8b1d937b-99eb-4584-8bc2-ad9b2c354b4e",
+      "codigo": "remo",
+      "nombre": "Remo",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "fd5c0c2d-cfff-4ab8-8ca6-b4490e4f6b0d",
+      "codigo": "rugby",
+      "nombre": "Rugby",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "cff98976-5211-4bc7-b250-21faf9425110",
+      "codigo": "senderismo",
+      "nombre": "Senderismo",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "0850c9e8-0602-4281-b384-9a67dae3522f",
+      "codigo": "snowboard",
+      "nombre": "Snowboard",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "888249ee-95ed-4c02-aa44-2e22659c8ec7",
+      "codigo": "softbol",
+      "nombre": "Sóftbol",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "3f124601-38ed-48cb-8abb-ebbe1e2aabd5",
+      "codigo": "squash",
+      "nombre": "Squash",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "3dd5b4d3-bc3d-4b58-a6c9-ab904099382e",
+      "codigo": "stand_up_paddle",
+      "nombre": "Stand up paddle",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "f67e9291-89b5-4bad-98c0-87c6c4bb7172",
+      "codigo": "surf",
+      "nombre": "Surf",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "0245f317-d9ca-4f62-aa06-12ddb822e3db",
+      "codigo": "tenis",
+      "nombre": "Tenis",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "9a378758-1142-4372-8bce-21e5c57fcda3",
+      "codigo": "tenis_mesa",
+      "nombre": "Tenis de mesa",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "cd8f000e-be7d-4155-acff-edf4d0275e11",
+      "codigo": "trail_running",
+      "nombre": "Trail running",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "8c41df31-36ad-4300-a966-4559e16530f7",
+      "codigo": "trote",
+      "nombre": "Trote",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "5c1440f4-2150-4b62-89e2-c91cec8a91d0",
+      "codigo": "ultimate",
+      "nombre": "Ultimate",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "fec96d04-4816-459e-bf64-2a19c6f05637",
+      "codigo": "voleibol",
+      "nombre": "Voleibol",
+      "descripcion": null,
+      "activo": true
+    },
+    {
+      "id": "eb12549c-9987-484f-8afd-378293f50578",
+      "codigo": "yoga",
+      "nombre": "Yoga",
+      "descripcion": null,
+      "activo": true
+    }
+  ]
+}

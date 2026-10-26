@@ -1,0 +1,6 @@
+# Los PDF deben conservar sus bytes y tratarse como archivos binarios.
+*.pdf binary
+
+# Las migraciones ya registradas deben conservar sus bytes y checksums,
+# tambien al pasar de Windows al contenedor Linux.
+packages/database/prisma/migrations/** -text whitespace=-blank-at-eof

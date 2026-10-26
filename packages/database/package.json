@@ -1,9 +1,21 @@
 {
-  "name": "database",
+  "name": "@comunidad/database",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": ["dist"],
   "scripts": {
+    "generate": "prisma generate --config=prisma.generate.config.ts",
+    "prebuild": "npm run generate",
+    "build": "tsc -p tsconfig.build.json",
+    "backend:env": "node scripts/configurar-backend.ts",
     "seed": "prisma db seed --config=prisma.migrate.config.ts",
     "seed:test": "node prisma/seed.ts --database comunidad_deportiva_baseline_test",
     "test:seed": "node --test prisma/seed.integration.test.ts",

@@ -1,10 +1,19 @@
 # Frontend Angular
 
 Angular 22 con componentes standalone, Signals, rutas diferidas y Tailwind.
-La página inicial muestra el acceso a **Falta Uno**. Incluye `/registro` y
+La página inicial `/inicio` muestra la sesión y un estado vacío de encuentros.
+Sin sesión, redirige al acceso. El login y las sesiones existentes llevan a `/inicio`.
+Incluye `/registro` y
 `/iniciar-sesion`, conectados a la API. Ver [autenticación](../../docs/auth.md).
 La ruta `/estado` comprueba la API y PostgreSQL a través de `GET /health`.
 No se conecta directamente a la base ni contiene credenciales.
+
+Para probar múltiples cuentas en desarrollo se pueden usar correos ficticios
+distintos, por ejemplo `jugador1@example.test` y `jugador2@example.test`.
+No se envían correos ni se exige verificación para ingresar en esta fase.
+El estado pendiente se conserva en la base: no se afirma haber verificado el correo.
+Cerrar sesión desde Inicio permite ingresar con otra cuenta. La búsqueda y
+creación de encuentros todavía no están implementadas.
 
 ## Desarrollo
 

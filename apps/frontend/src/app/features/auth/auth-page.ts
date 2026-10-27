@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { AuthApi, Usuario } from '../../core/auth/auth-api';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-auth-page',
@@ -16,6 +17,7 @@ export class AuthPage {
   private readonly destroy = inject(DestroyRef);
   private readonly router = inject(Router);
   readonly register = inject(ActivatedRoute).snapshot.data['register'] === true;
+  readonly development = !environment.production;
   readonly busy = signal(false);
   readonly error = signal('');
   readonly notice = signal('');
@@ -55,6 +57,7 @@ export class AuthPage {
         next: (result) => {
           this.usuario.set(result.usuario);
           this.loading.set(false);
+          void this.router.navigateByUrl('/inicio');
         },
         error: (err) => {
           this.loading.set(false);
@@ -86,7 +89,10 @@ export class AuthPage {
         this.form.controls.password.reset();
         if (this.register) {
           this.notice.set('¡Tu cuenta está creada! Ya puedes iniciar sesión.');
-        } else this.usuario.set(result.usuario);
+        } else {
+          this.usuario.set(result.usuario);
+          void this.router.navigateByUrl('/inicio');
+        }
       },
       error: (err) => {
         this.busy.set(false);

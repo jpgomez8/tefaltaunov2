@@ -1,0 +1,27 @@
+:host { display: block; color: #122842; }
+.home-shell { min-height: 100dvh; background: #f5f7fb; }
+header { background: white; border-bottom: 1px solid #e0e6ef; padding: 12px max(24px, calc((100% - 1120px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+header img { object-fit: contain; display: block; }
+nav { display: flex; align-items: center; gap: 24px; }
+a { color: #1959b6; text-decoration: none; font-weight: 600; }
+button { cursor: pointer; background: white; border: 1px solid #b9c8de; border-radius: 10px; padding: 10px 16px; color: #122842; }
+button:disabled { opacity: .6; cursor: wait; }
+a:focus-visible, button:focus-visible { outline: 3px solid #4586ef; outline-offset: 4px; }
+main { max-width: 1120px; margin: auto; padding: 48px 24px 72px; }
+.hero { background: #122b50; color: white; border-radius: 24px; padding: clamp(28px, 5vw, 56px); overflow-wrap: anywhere; }
+.eyebrow { font-size: 11px; letter-spacing: .16em; font-weight: 700; }
+.hero .eyebrow { color: #a9cdfb; }
+h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin: 18px 0; letter-spacing: -.04em; }
+.hero > p:not(.eyebrow) { font-size: 20px; color: #d3e2f8; }
+.session { display: inline-block; margin-top: 20px; font-size: 13px; color: #c1d5ee; }
+.encounters { margin-top: 44px; }
+h2 { font-size: 26px; margin: 12px 0 24px; }
+.empty { background: white; border: 1px solid #e0e6ef; border-radius: 20px; padding: 40px 24px; text-align: center; }
+.mark { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: #eaf1fe; color: #1959b6; font-size: 32px; }
+h3 { font-size: 22px; }
+.empty p { max-width: 440px; margin: 12px auto; line-height: 1.6; }
+.muted, footer { color: #5f7188; font-size: 14px; }
+.alert { margin-bottom: 24px; padding: 20px; background: #fff0ee; border-radius: 12px; color: #8a2631; }
+.alert button { margin-left: 12px; }
+footer { padding: 24px; text-align: center; }
+@media (max-width: 540px) { header { padding: 12px 16px; gap: 12px; } header img { width: 120px; height: auto; } nav { gap: 12px; font-size: 13px; } nav button { padding: 9px; } main { padding: 28px 16px 48px; } }

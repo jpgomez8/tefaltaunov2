@@ -38,12 +38,6 @@
           }}</strong
           ><span>{{ user.correo }}</span>
         </div>
-        @if (user.estado === 'pendiente_verificacion') {
-          <p class="info">
-            Tu correo aún está pendiente de verificación. El envío de correos estará disponible más
-            adelante.
-          </p>
-        }
         <p class="intro">
           Estamos preparando los encuentros deportivos. Por ahora, ya tienes tu cuenta y tu acceso.
         </p>
@@ -108,6 +102,9 @@
           />
           @if (invalid('correo')) {
             <small class="field-error">Ingresa un correo electrónico válido.</small>
+          }
+          @if (register && development) {
+            <p class="hint">Puedes probar con correos ficticios, como jugador1@example.test. No necesitas verificar el correo para ingresar.</p>
           }
           <label for="password">Contraseña</label>
           <div class="password-field">

@@ -2,6 +2,10 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'inicio',
+    loadComponent: () => import('./features/home/home-page').then((m) => m.HomePage),
+  },
+  {
     path: 'estado',
     pathMatch: 'full',
     loadComponent: () => import('./features/health/health-page').then((m) => m.HealthPage),
@@ -15,6 +19,6 @@ export const routes: Routes = [
     data: { register: true },
     loadComponent: () => import('./features/auth/auth-page').then((m) => m.AuthPage),
   },
-  { path: '', pathMatch: 'full', redirectTo: 'iniciar-sesion' },
-  { path: '**', redirectTo: 'iniciar-sesion' },
+  { path: '', pathMatch: 'full', redirectTo: 'inicio' },
+  { path: '**', redirectTo: 'inicio' },
 ];

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { routes } from '../../app.routes';
 import { API_URL } from '../../core/config/api-url';
@@ -48,7 +48,7 @@ describe('Acceso a Falta Uno', () => {
     expect(page.form.controls.password.value).toBe('');
   });
   it('muestra un rechazo de credenciales y permite reintentar', async () => {
-    const { page } = await open('/iniciar-sesion');
+    const { page, harness } = await open('/iniciar-sesion');
     page.form.patchValue({ correo: 'yerko@example.test', password: 'incorrecta' });
     page.submit();
     http
@@ -71,8 +71,13 @@ describe('Acceso a Falta Uno', () => {
         },
       });
     expect(page.usuario()?.nombre_publico).toBe('Yerko');
-    page.logout();
-    http.expectOne('/api/auth/logout').flush(null, { status: 204, statusText: 'No Content' });
-    expect(page.usuario()).toBeNull();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/inicio');
+    http.expectOne('/api/auth/me').flush({ usuario: {
+      id: '1', nombre_publico: 'Yerko', correo: 'yerko@example.test', estado: 'pendiente_verificacion',
+    } });
+    harness.detectChanges();
+    expect(harness.routeNativeElement?.textContent).toContain('Hola, Yerko');
+    expect(harness.routeNativeElement?.textContent).not.toContain('pendiente de verificación');
   });
 });

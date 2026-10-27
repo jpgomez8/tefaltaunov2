@@ -1,5 +1,10 @@
 {
+  "name": "falta-uno",
+  "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
     "docker:env": "node scripts/preparar-docker.mjs",
     "docker:up": "node scripts/docker-up.mjs",
@@ -7,8 +12,5 @@
     "docker:setup": "node scripts/docker-command.mjs setup",
     "docker:down": "node scripts/docker-command.mjs down",
     "docker:logs": "node scripts/docker-command.mjs logs"
-  },
-  "dependencies": {
-    "google-auth-library": "^8.9.0"
   }
 }

@@ -1,0 +1,8 @@
+.brand { display: block; width: 100%; max-width: 340px; }
+.brand .brand-logo { display: block; width: 100%; height: auto; object-fit: contain; mix-blend-mode: lighten; }
+.story-copy { margin-top: 38px; }
+.account-logo { width: 260px; max-width: 100%; height: auto; background: #081b33; padding: 20px; border-radius: 12px; }
+@media (max-width: 700px) {
+  .brand { max-width: 265px; }
+  .story-copy { margin-top: 25px; }
+}

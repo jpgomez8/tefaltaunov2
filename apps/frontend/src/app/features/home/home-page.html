@@ -1,0 +1,40 @@
+<div class="home-shell">
+  <header>
+    <a routerLink="/inicio" aria-label="Falta Uno: inicio"><img src="images/falta-uno-logo-azul.png" alt="Falta Uno" width="180" height="80" /></a>
+    <nav aria-label="Navegación principal">
+      <a routerLink="/inicio" aria-current="page">Inicio</a>
+      @if (usuario()) {
+        <button type="button" (click)="logout()" [disabled]="busy()">{{ busy() ? 'Cerrando sesión…' : 'Cerrar sesión' }}</button>
+      }
+    </nav>
+  </header>
+  <main>
+    @if (loading()) {
+      <p role="status">Cargando tu inicio…</p>
+    }
+    @if (error()) {
+      <div class="alert" role="alert">{{ error() }}
+        @if (!usuario()) { <button type="button" (click)="load()">Reintentar</button> }
+      </div>
+    }
+    @if (usuario(); as user) {
+      <section class="hero">
+        <p class="eyebrow">QUÉ BUENO TENERTE AQUÍ</p>
+        <h1>Hola, {{ user.nombre_publico }}.</h1>
+        <p>El próximo equipo empieza contigo.</p>
+        <span class="session">Sesión iniciada · {{ user.correo }}</span>
+      </section>
+      <section class="encounters" aria-labelledby="encounters-title">
+        <p class="eyebrow">TU COMUNIDAD</p>
+        <h2 id="encounters-title">Encuentros deportivos</h2>
+        <div class="empty">
+          <span class="mark" aria-hidden="true">+</span>
+          <h3>Estamos preparando la cancha</h3>
+          <p>Pronto podrás buscar encuentros, crear uno e invitar a más personas a jugar.</p>
+          <p class="muted">Estas funciones todavía están en desarrollo.</p>
+        </div>
+      </section>
+    }
+  </main>
+  <footer>Falta Uno · Más movimiento. Más encuentros.</footer>
+</div>
